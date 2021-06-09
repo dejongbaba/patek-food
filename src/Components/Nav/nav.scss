@@ -1,0 +1,43 @@
+.nav{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &-logo{
+    width: 100px;
+    height: 100px;
+  }
+  a {
+    margin: 1rem;
+    color: var(--black);
+    display: block;
+    font-weight: 600;
+    font-family: var(--dm-sans);
+    text-decoration: none;
+    position: relative;
+    cursor:pointer;
+    transition: all .3s ease-in-out;
+
+    span{
+      position: relative;
+      z-index: 3;
+    }
+  }
+
+
+
+  a:hover{
+    color: var(--secondary);
+  }
+  a:hover::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    width: 100%;
+    height: 7px;
+    background-color: var(--primary);
+  }
+  a:nth-of-type(3):hover::after{
+    content: none;
+  }
+}

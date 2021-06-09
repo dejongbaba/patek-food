@@ -1,0 +1,21 @@
+.top-nav{
+  background-color: var(--secondary);
+  color: var(--white);
+  justify-content: space-between;
+  display: flex;
+  padding: 1rem;
+  &-contact{
+    align-items: center;
+    display: flex;
+    img{
+      margin-right: .5rem;
+      width: 15px;
+    }
+  }
+
+  &-social{
+    img{
+      margin-right: .5rem ;
+    }
+  }
+}
