@@ -4,18 +4,20 @@ import Home from "./Pages/Home/Home";
 import About from "./Pages/About/About";
 import Services from "./Pages/Services/Services";
 import Contact from "./Pages/Contact/Contact";
+import Product from "./Pages/Product/Product";
 function App() {
   return (
-    <div className="App">
+    <>
       <Router>
         <Switch>
-          <Route path="/" component={Home} />
-          <Route path="/about" component={About} />
-          <Route path="/services" component={Services} />
-          <Route path="/contact" component={Contact} />
+          <Route exact path="/" component={Home} />
+          <Route exact path="/about" component={About} />
+          <Route exact path="/services" component={Services} />
+          <Route exact path="/contact" component={Contact} />
+          <Route exact path="/products" component={Product} />
         </Switch>
       </Router>
-    </div>
+    </>
   );
 }
 

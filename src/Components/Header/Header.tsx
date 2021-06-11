@@ -6,6 +6,7 @@ export type HeaderType = {
   title: string;
   description: string;
   link: string;
+  linkText: string;
 };
 
 function Header({
@@ -13,6 +14,7 @@ function Header({
   title,
   description,
   link,
+  linkText,
 }: Partial<HeaderType>) {
   return (
     <div className="header">
@@ -21,7 +23,7 @@ function Header({
         <h1 className="header-title">{title}</h1>
         <p className="header-description">{description} </p>
         <a href={link} className="header-button">
-          Learn More
+          {linkText}
         </a>
       </div>
     </div>

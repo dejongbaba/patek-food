@@ -4,13 +4,13 @@
   justify-content: center;
   &-logo{
     width: 100px;
-    height: 100px;
+    //height: 120px;
   }
   a {
-    margin: 1rem;
+    margin: 1rem 2rem;
     color: var(--black);
     display: block;
-    font-weight: 600;
+    font-weight: normal;
     font-family: var(--dm-sans);
     text-decoration: none;
     position: relative;

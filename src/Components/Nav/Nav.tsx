@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../../assets/svg/Patec Foods Logo 1.svg";
+import logo from "../../assets/png/logo.png";
 import "./nav.scss";
 type NavType = {};
 function Nav(props: NavType) {

@@ -7,15 +7,22 @@
   &-contact{
     align-items: center;
     display: flex;
-    img{
+    img,i,a{
       margin-right: .5rem;
-      width: 15px;
+      //width: 15px;
     }
+
+    a{
+      text-decoration: none;
+      color: var(--white);
+    }
+
   }
 
   &-social{
-    img{
+    i{
       margin-right: .5rem ;
+      color: var(--white);
     }
   }
 }

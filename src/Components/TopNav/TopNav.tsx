@@ -1,29 +1,41 @@
-import React from 'react';
-import './TopNav.scss';
-import faceBook from '../../assets/svg/facebook.svg';
-import linkedIn from '../../assets/svg/linkedIn.svg';
-import instagram from "../../assets/svg/instagram.svg";
-import email from "../../assets/svg/email.svg";
-import phone from "../../assets/svg/phone.svg";
-type TopNavType = {
+import React from "react";
+import "./TopNav.scss";
+type TopNavType = {};
 
-}
-
-function TopNav(props:TopNavType) {
-    return (
-        <div className='top-nav'>
-            <div className="top-nav-social">
-                <img src={faceBook} alt="facebook"/>
-                <img src={instagram} alt="instagram"/>
-                <img src={linkedIn} alt="linkedIn"/>
-            </div>
-            <div className="top-nav-contact">
-                <span><img src={phone} alt="contact"/> <span>+234 802 9432 334</span></span>
-                <span><img src={email} alt="email"/> <span>info@patecfoods.com</span></span>
-
-            </div>
-        </div>
-    );
+function TopNav(props: TopNavType) {
+  return (
+    <div className="top-nav">
+      <div className="top-nav-social">
+        <a href="www.facebook.com" target="_blank">
+          <i className="fa-1x fab fa-facebook" />
+        </a>
+        <a href="www.instagram.com" target="_blank">
+          <i className="fa-1x fab fa-instagram" />
+        </a>
+        <a href="www.linkedin.com" target="_blank" rel="noopener noreferrer">
+          <i className="fa-1x fab fa-linkedin" />
+        </a>
+      </div>
+      <div className="top-nav-contact">
+        <a
+          href="tel:+234 802 9432 334"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i className="fa fas fa-phone" />
+          <span>+234 802 9432 334</span>
+        </a>
+        <a
+          href="mailto:info@patecfoods.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i className="fa fas fa-envelope" />
+          <span>info@patecfoods.com</span>
+        </a>
+      </div>
+    </div>
+  );
 }
 
 export default TopNav;

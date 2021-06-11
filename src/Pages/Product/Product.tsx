@@ -4,7 +4,7 @@ import Footer from "../../Components/Footer/Footer";
 
 type AboutType = {};
 
-function Services(props: AboutType) {
+function Product(props: AboutType) {
   return (
     <div>
       <PageTop />
@@ -13,4 +13,4 @@ function Services(props: AboutType) {
   );
 }
 
-export default Services;
+export default Product;
