@@ -8,6 +8,8 @@ import TopNav from "../TopNav/TopNav";
 import Nav from "../Nav/Nav";
 import catfishFactory from "../../assets/png/catfishFactory.png";
 import backgroundSquare from "../../assets/png/background-square.png";
+import Button from "../Button/Button";
+import Form from "../Form/Form";
 
 export const HighQualityProduct = () => {
   return (
@@ -115,12 +117,14 @@ export const ImageWithPattern = ({
     <div
       className={`w-50 flex-basis-50-p-cent flex-grow-1 position-relative ${className}`}
     >
-      <img className="w-100 z-1" src={image} alt="catfish factory" />
-      <img
-        src={bgPattern}
-        alt=""
-        className={`square-100 bottom-right position-absolute ${bgPatternClassName}`}
-      />
+      {image && <img className="w-100 z-1" src={image} alt="catfish factory" />}
+      {bgPattern && (
+        <img
+          src={bgPattern}
+          alt=""
+          className={`square-100 bottom-right position-absolute ${bgPatternClassName}`}
+        />
+      )}
     </div>
   );
 };
@@ -168,7 +172,7 @@ export function BottomCta({
       <h2 className="w-40 text-white">{title}</h2>
       <a
         href={link}
-        className="bg-white no-decoration text-green d-flex align-center justify-center no-border br-1 text-center w-150 h-50"
+        className="bg-white no-decoration pointer text-green d-flex align-center justify-center no-border br-1 text-center w-150 h-50"
       >
         {linkText}
       </a>
@@ -199,20 +203,25 @@ type CardProp = {
   className: string;
   description: string;
   title: string;
+  children: ReactNode;
 };
 export const CardWithText = ({
   image,
   className = "",
   description = "",
   title = "",
+  children,
 }: Partial<CardProp>) => {
   return (
     <div className={`card mb-2 br-2 bg-green-light ${className}`}>
-      <img className="w-100" src={image} alt="" />
-      <div className="p-2 text-green">
-        <h3>{title}</h3>
-        <p>{description}</p>
-      </div>
+      {image && <img className="w-100" src={image} alt="" />}
+      {title && description && (
+        <div className="p-2 text-green">
+          <h3>{title}</h3>
+          <p>{description}</p>
+        </div>
+      )}
+      {children}
     </div>
   );
 };
@@ -245,4 +254,75 @@ export const Timeline = ({ data }: Partial<TimelineProps>) => {
       </ul>
     </div>
   );
+};
+
+type ProductListProp = {
+  products: Array<ProductProp>;
+};
+
+type ProductProp = {
+  name: string;
+};
+
+export const ProductList = ({ products }: ProductListProp) => {
+  return (
+    <ul className="py-2 unstyled-list p-0 w-300px bg-green br-2 text-center">
+      {products?.length &&
+        products.map((p: ProductProp) => (
+          <li className="p-2 white pointer text-white bt-white-1 first-bt-white">
+            {p.name}
+          </li>
+        ))}
+    </ul>
+  );
+};
+
+export const ProductCard = () => {
+  return (
+    <div className="p-4 w-100">
+      <h3>WholeFish</h3>
+      <ImageCarousel />
+      <div className="d-flex align-start">
+        <div>
+          <Form.Select label="Size" name={""}>
+            <option value="">Whole (80g - 110g)</option>
+          </Form.Select>
+          <div className="d-flex">
+            <Form.CheckBox name="" label="N 4560(Kilogram)" />
+            <Form.CheckBox name="" label="N 4560(Kilogram)" />
+          </div>
+        </div>
+        <div>
+          <span>Qty</span>
+          <div className="d-flex">
+            <Button
+              type="button"
+              title="+"
+              className="text-yellow w-100-px height-100px"
+            />
+            <strong>4</strong>
+            <Button
+              type="button"
+              title="-"
+              className="text-yellow w-100-px height-100px"
+            />
+          </div>
+        </div>
+      </div>
+
+      <Button
+        type="button"
+        title="Add to Cart"
+        className="w-100 btn-green text-center"
+      />
+      <p className="text-gray text-center">
+        {" "}
+        Range per carton <strong>110 - 115</strong>
+      </p>
+    </div>
+  );
+};
+
+export const ImageCarousel = ({ image }: any) => {
+  return <img src={image} alt="" />;
 };

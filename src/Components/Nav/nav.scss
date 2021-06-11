@@ -25,10 +25,10 @@
 
 
 
-  a:hover{
+  a:hover,a.active{
     color: var(--secondary);
   }
-  a:hover::after {
+  a:hover::after,a.active::after {
     content: '';
     position: absolute;
     bottom: 2px;
@@ -37,7 +37,7 @@
     height: 7px;
     background-color: var(--primary);
   }
-  a:nth-of-type(3):hover::after{
+  a:nth-of-type(3):hover::after,a:nth-of-type(3).active::after{
     content: none;
   }
 }

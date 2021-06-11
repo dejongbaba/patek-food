@@ -11,35 +11,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12e7b538-ea45-4767-a8c7-28638918783d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Components/PatekUI/PatekUi.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Pages/Product/Product.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/png/Spiral.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/png/acrylic-tanks.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/png/bg-spirals-right.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/png/bottom-right-spiral.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/png/catfish-circle.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/png/cirular-food-safety-image.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/png/staff-images.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Form/Form.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Form/Form.test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Form/Form.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Spinner/Spinner.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Spinner/Spinner.test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Spinner/Spinner.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/png/kify.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/BottomCta/BottomCta.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/BottomCta/bottomCta.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Footer/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Footer/Footer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Header/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Button/Button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Button/Button.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Nav/Nav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Nav/Nav.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Nav/nav.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Nav/nav.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/TopNav/TopNav.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/TopNav/TopNav.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/TopNav/TopNav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/TopNav/TopNav.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/PatekUI/PatekUi.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/PatekUI/PatekUi.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pages/About/About.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/About/About.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pages/Contact/Contact.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Contact/Contact.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pages/Home/Home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Home/Home.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Services/Services.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Services/Services.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Product/Product.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Product/Product.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/App.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,8 +71,8 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/assets/png" />
-      <recent name="$PROJECT_DIR$/src/Pages" />
       <recent name="$PROJECT_DIR$/src/Components" />
+      <recent name="$PROJECT_DIR$/src/Pages" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/assets/svg" />
     </key>
@@ -118,7 +106,7 @@
       <workItem from="1622896594789" duration="1928000" />
       <workItem from="1623075030476" duration="10586000" />
       <workItem from="1623189778787" duration="20673000" />
-      <workItem from="1623329936171" duration="19725000" />
+      <workItem from="1623329936171" duration="32713000" />
     </task>
     <servers />
   </component>
@@ -162,17 +150,17 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1419" height="252" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1623103040783" />
-    <state x="221" y="89" key="SettingsEditor" timestamp="1623197911304">
+    <state x="221" y="89" key="SettingsEditor" timestamp="1623417168986">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="221" y="89" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1623197911304" />
+    <state x="221" y="89" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1623417168986" />
     <state x="413" y="189" width="613" height="522" key="find.popup" timestamp="1623362643799">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="413" y="189" width="613" height="522" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1623362643799" />
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1623370669961">
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1623418170862">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1623370669961" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1623418170862" />
   </component>
 </project>

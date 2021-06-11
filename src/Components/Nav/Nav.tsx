@@ -1,26 +1,26 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import logo from "../../assets/png/logo.png";
 import "./nav.scss";
 type NavType = {};
 function Nav(props: NavType) {
   return (
     <nav className="nav">
-      <Link to="/">
+      <NavLink exact activeClassName="active" to="/">
         <span>Home</span>
-      </Link>
-      <Link to="/about">
+      </NavLink>
+      <NavLink activeClassName="active" to="/about">
         <span>About</span>
-      </Link>
-      <Link to="/">
+      </NavLink>
+      <NavLink activeClassName="active" to="/">
         <img className="nav-logo" src={logo} alt="patek logo" />
-      </Link>
-      <Link to="/products">
+      </NavLink>
+      <NavLink activeClassName="active" to="/products">
         <span>Products</span>
-      </Link>
-      <Link to="/contact">
+      </NavLink>
+      <NavLink activeClassName="active" to="/contact">
         <span>Contact</span>
-      </Link>
+      </NavLink>
     </nav>
   );
 }

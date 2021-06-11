@@ -7,7 +7,7 @@ export interface IProps {
   loading?: boolean;
   type: "submit" | "button" | "reset";
   icon?: string;
-  onClick?: (e:any) => void;
+  onClick?: (e: any) => void;
 }
 
 function Button(props: IProps) {
@@ -18,7 +18,7 @@ function Button(props: IProps) {
       onClick={(e) => props.onClick && props.onClick(e)}
     >
       {props.icon && <img src={props.icon} alt="icon-button" />}
-      {props.loading ? "...loading" : <p>{props.title}</p>}
+      {props.loading ? "...loading" : <span>{props.title}</span>}
     </button>
   );
 }
