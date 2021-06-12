@@ -51,6 +51,7 @@ export const PageTop = ({
   description = `We employ the most technologically advanced fish
                      production equipment in the industry.`,
   link = "/about",
+  image,
   linkText = "Learn More",
 }: Partial<PageTopType>) => {
   return (
@@ -58,6 +59,7 @@ export const PageTop = ({
       <TopNav />
       <Nav />
       <Header
+        image={image}
         title={title}
         description={description}
         linkText={linkText}
@@ -341,7 +343,8 @@ type ImageCarouselType = {
 const owlConfig = {
   // loop: true,
   margin: 10,
-  item: 1,
+  items: 1,
+  autoWidth: true,
   responsive: {
     0: {
       items: 1,
@@ -364,7 +367,11 @@ export const ImageCarousel = ({ images }: ImageCarouselType) => {
   return (
     <OwlCarousel {...owlConfig}>
       {images?.length &&
-        images.map((i: string) => <img src={i} className="w-100 " alt="" />)}
+        images.map((i: string) => (
+          <div className="w-350px">
+            <img src={i} className="w-100 " alt="" />
+          </div>
+        ))}
     </OwlCarousel>
   );
 };

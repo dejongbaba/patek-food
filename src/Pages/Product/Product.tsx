@@ -13,6 +13,7 @@ import Footer from "../../Components/Footer/Footer";
 import kify from "../../assets/png/kify.png";
 import kifyPack from "../../assets/png/kify-smoked-african-catfish.png";
 import catFishProduct from "../../assets/png/catfDryFish.png";
+import worker from "../../assets/png/worker-working-bg.png";
 
 function Product() {
   const prods = [
@@ -21,16 +22,16 @@ function Product() {
     { name: "Fish Tail" },
     { name: "Fish Steak" },
   ];
-  const productImages: string[] | undefined = [
-    catFishProduct,
-    catFishProduct,
-    catFishProduct,
-    catFishProduct,
-    catFishProduct,
-  ];
+  const productImages: string[] | undefined = [catFishProduct, catFishProduct];
   return (
     <div>
-      <PageTop />
+      <PageTop
+        image={worker}
+        link="/contact"
+        linkText="Contact us"
+        title="High quality products using high quality standards"
+        description="We employ the most technologically advanced fish production equipment in the industry. "
+      />
       <SectionWithFlex flexClassName="align-center">
         <ImageWithPattern image={kify} bgPattern="" />
         <TextWithPattern pattern={false} title="" desc="">
@@ -95,7 +96,7 @@ function Product() {
         </div>
         <ProductCard images={productImages} />
       </SectionWithFlex>
-      <BottomCta />
+      <BottomCta title="Learn more about Patec Food" link="/about" />
       <Footer />
     </div>
   );

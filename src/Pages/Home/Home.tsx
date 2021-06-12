@@ -30,8 +30,8 @@ function Home() {
       </SectionWithFlex>
       {/*<ExploreProduct />*/}
       <Section className="bg-green-lighter">
-        <div className="position-relative w-50 mx-auto text-center">
-          <h2 className="text-green font-bold pt-3">
+        <div className="position-relative w-50 pt-3 mx-auto text-center">
+          <h2 className="text-green font-bold">
             Delivering Excellence from Egg to Harvest
           </h2>
           <p className="text-green mb-3">

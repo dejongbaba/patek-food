@@ -7,12 +7,14 @@ import {
 import Footer from "../../Components/Footer/Footer";
 import Form from "../../Components/Form/Form";
 import Button from "../../Components/Button/Button";
+import contactFactory from "../../assets/png/contact-factory.png";
+
 type AboutType = {};
 
 function Contact(props: AboutType) {
   return (
     <div>
-      <PageTop />
+      <PageTop image={contactFactory} title="Get in Touch with Us" />
       <div className="-mt-50 w-70 mx-auto position-relative z-1 d-grid col-3 row-1">
         <CardWithText className="bg-white d-flex flex-column justify-center align-center text-center box-shadow-1 p-2 font-bold">
           <i className="fa fas fa-phone text-green text-center" />

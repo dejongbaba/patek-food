@@ -475,7 +475,9 @@ body {
 .top-padding-20 {
   padding-top: 20px !important;
 }
-
+.pt-3{
+  padding-top: 3rem;
+}
 .mr-0-5 {
   margin-right: 0.5rem;
 }
@@ -579,6 +581,9 @@ body {
 }
 .w-30{
   width: 30%;
+}
+.w-350px{
+  width: 350px;
 }
 
 .mt-2 {

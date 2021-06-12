@@ -18,6 +18,7 @@ import acrylicTank from "../../assets/png/acrylic-tanks.png";
 import foodSafety from "../../assets/png/cirular-food-safety-image.png";
 import bgSpiral from "../../assets/png/bg-spirals-right.png";
 import bottomRightSpiral from "../../assets/png/bottom-right-spiral.png";
+import catFishbg from "../../assets/png/cat-fish-bg.png";
 type AboutType = {};
 
 function About(props: AboutType) {
@@ -45,7 +46,14 @@ function About(props: AboutType) {
   ];
   return (
     <div>
-      <PageTop linkText={"Contact us"} link={"/contact"} />
+      <PageTop
+        image={catFishbg}
+        description="We employ the most technologically advanced fish production equipment in the industry. "
+        title="Buy healthy controlled
+Catfish from Hatchery to Oven"
+        linkText={"Contact us"}
+        link={"/contact"}
+      />
       <Banner />
       <SectionWithFlex className="mt-4" flexClassName="justify-space-between">
         <CircularImageWithSpiral title="Fingerlings" image={catFish} />
