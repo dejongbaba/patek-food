@@ -1,9 +1,10 @@
 import * as React from "react";
 import "./Button.scss";
+import { ReactNode } from "react";
 
 export interface IProps {
   className?: string;
-  title?: string;
+  title?: string | ReactNode;
   loading?: boolean;
   type: "submit" | "button" | "reset";
   icon?: string;

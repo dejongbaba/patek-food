@@ -3,6 +3,7 @@ import {
   BottomCta,
   ImageWithPattern,
   PageTop,
+  ProductCard,
   ProductList,
   Section,
   SectionWithFlex,
@@ -11,6 +12,7 @@ import {
 import Footer from "../../Components/Footer/Footer";
 import kify from "../../assets/png/kify.png";
 import kifyPack from "../../assets/png/kify-smoked-african-catfish.png";
+import catFishProduct from "../../assets/png/catfDryFish.png";
 
 function Product() {
   const prods = [
@@ -18,6 +20,13 @@ function Product() {
     { name: "Fish Head" },
     { name: "Fish Tail" },
     { name: "Fish Steak" },
+  ];
+  const productImages: string[] | undefined = [
+    catFishProduct,
+    catFishProduct,
+    catFishProduct,
+    catFishProduct,
+    catFishProduct,
   ];
   return (
     <div>
@@ -79,12 +88,12 @@ function Product() {
           </p>
         </div>
       </Section>
-
       <SectionWithFlex>
-        <div>
+        <div className="mr-3">
           <h2 className="font-bold text-green">Order now</h2>
           <ProductList products={prods} />
         </div>
+        <ProductCard images={productImages} />
       </SectionWithFlex>
       <BottomCta />
       <Footer />

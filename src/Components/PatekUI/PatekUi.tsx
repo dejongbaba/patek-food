@@ -10,6 +10,8 @@ import catfishFactory from "../../assets/png/catfishFactory.png";
 import backgroundSquare from "../../assets/png/background-square.png";
 import Button from "../Button/Button";
 import Form from "../Form/Form";
+// @ts-ignore
+import OwlCarousel from "react-owl-carousel2";
 
 export const HighQualityProduct = () => {
   return (
@@ -269,43 +271,53 @@ export const ProductList = ({ products }: ProductListProp) => {
     <ul className="py-2 unstyled-list p-0 w-300px bg-green br-2 text-center">
       {products?.length &&
         products.map((p: ProductProp) => (
-          <li className="p-2 white pointer text-white bt-white-1 first-bt-white">
-            {p.name}
-          </li>
+          <li className="p-2 white pointer text-white bt-white-1">{p.name}</li>
         ))}
     </ul>
   );
 };
 
-export const ProductCard = () => {
+type ProductCardType = ImageCarouselType & {
+  name: string;
+};
+
+export const ProductCard = ({
+  images,
+  name = "WholeFish",
+}: Partial<ProductCardType>) => {
   return (
-    <div className="p-4 w-100">
-      <h3>WholeFish</h3>
-      <ImageCarousel />
+    <div className="p-2 w-70 box-shadow-1 br-2">
+      <h3>{name}</h3>
+      <ImageCarousel images={images} />
       <div className="d-flex align-start">
-        <div>
-          <Form.Select label="Size" name={""}>
-            <option value="">Whole (80g - 110g)</option>
-          </Form.Select>
-          <div className="d-flex">
-            <Form.CheckBox name="" label="N 4560(Kilogram)" />
-            <Form.CheckBox name="" label="N 4560(Kilogram)" />
+        <div className="mr-3 w-100">
+          <div className="d-flex align-start">
+            <Form.Select className="flex-grow-1" label="Size" name={""}>
+              <option value="">Whole (80g - 110g)</option>
+            </Form.Select>
+            <div className="ml-1">
+              <div>
+                <span className="text-yellow">Qty</span>
+              </div>
+              <div className="d-flex align-center">
+                <Button
+                  type="button"
+                  title="+"
+                  className="text-yellow bg-white no-border border-yellow w-50px h-50-px"
+                />
+                <strong className="mx-2">4</strong>
+                <Button
+                  type="button"
+                  title="-"
+                  className="text-yellow bg-white no-border border-yellow w-50px h-50-px"
+                />
+              </div>
+            </div>
           </div>
-        </div>
-        <div>
-          <span>Qty</span>
-          <div className="d-flex">
-            <Button
-              type="button"
-              title="+"
-              className="text-yellow w-100-px height-100px"
-            />
-            <strong>4</strong>
-            <Button
-              type="button"
-              title="-"
-              className="text-yellow w-100-px height-100px"
-            />
+
+          <div className="d-flex mb-2">
+            <Form.CheckBox name="" label="N 4560(Kilogram)" />
+            <Form.CheckBox name="" label="N 4560(Kilogram)" />
           </div>
         </div>
       </div>
@@ -313,7 +325,7 @@ export const ProductCard = () => {
       <Button
         type="button"
         title="Add to Cart"
-        className="w-100 btn-green text-center"
+        className="w-100 btn-green px-5 py-1 br-0-5 no-border text-center"
       />
       <p className="text-gray text-center">
         {" "}
@@ -323,6 +335,46 @@ export const ProductCard = () => {
   );
 };
 
-export const ImageCarousel = ({ image }: any) => {
-  return <img src={image} alt="" />;
+type ImageCarouselType = {
+  images?: Array<string>;
+};
+const owlConfig = {
+  // loop: true,
+  margin: 10,
+  item: 1,
+  responsive: {
+    0: {
+      items: 1,
+      nav: true,
+      loop: true,
+    },
+    600: {
+      items: 1,
+      nav: true,
+      loop: true,
+    },
+    1000: {
+      items: 1,
+      nav: true,
+      loop: true,
+    },
+  },
+};
+export const ImageCarousel = ({ images }: ImageCarouselType) => {
+  return (
+    <OwlCarousel {...owlConfig}>
+      {images?.length &&
+        images.map((i: string) => <img src={i} className="w-100 " alt="" />)}
+    </OwlCarousel>
+  );
+};
+
+export const CartButton = () => {
+  return (
+    <Button
+      type="button"
+      title={<i className="fa fas fa-cart" />}
+      className="br-50 bg-green position-fixed bottom-left-2 text-white w-50px h-50-px"
+    />
+  );
 };
