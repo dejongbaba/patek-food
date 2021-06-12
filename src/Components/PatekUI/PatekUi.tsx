@@ -10,23 +10,18 @@ import catfishFactory from "../../assets/png/catfishFactory.png";
 import backgroundSquare from "../../assets/png/background-square.png";
 import Button from "../Button/Button";
 import Form from "../Form/Form";
-// @ts-ignore
-import OwlCarousel from "react-owl-carousel2";
+import OwlCarousel from "react-owl-carousel";
 
-export const HighQualityProduct = () => {
+export const ProductSection = () => {
   return (
     <div className="d-flex position-relative my-4 py-2 w-100 height-400">
+      <img className="position-absolute w-90 top-left" src={yellowBg} alt="" />
+      <img className="position-absolute w-300px top-left" src={leftBg} alt="" />
       <img
-        className="position-absolute w-95 top-30-percent"
-        src={yellowBg}
+        className="position-absolute w-300px top-right--4"
+        src={rightBg}
         alt=""
       />
-      <img
-        className="position-absolute w-30 bottom-left-20"
-        src={leftBg}
-        alt=""
-      />
-      <img className="position-absolute w-30 top-right" src={rightBg} alt="" />
       <div className="w-70 mx-auto d-flex align-center">
         <img className="w-50" src={catFish} alt="" />
         <div>
@@ -69,12 +64,10 @@ export const PageTop = ({
   );
 };
 
-export const ExploreProduct = () => {
-  return <div className="height-400 position-relative"></div>;
-};
-
 type TextWithPatternProps = {
   className?: string;
+  titleClassName?: string;
+  descClassName?: string;
   children?: ReactNode;
   title?: string;
   desc?: string;
@@ -85,6 +78,8 @@ export const TextWithPattern = ({
   className = "",
   pattern = true,
   children,
+  titleClassName = "",
+  descClassName = "",
   title = "Most technologically advanced fish production equipment in the industry",
   desc = "Our catfish is raised in acrylic tanks that use the latest farming\n" +
     "        practices and best management practices. Therefore, Patec Foods delivers\n" +
@@ -98,8 +93,8 @@ export const TextWithPattern = ({
       {pattern && (
         <div className="rectangle top-left bg-light-yellow position-absolute" />
       )}
-      <h2>{title}</h2>
-      <p className="lh-regular">{desc}</p>
+      <h2 className={titleClassName}>{title}</h2>
+      <p className={`lh-regular ${descClassName}`}>{desc}</p>
     </div>
   );
 };
@@ -270,11 +265,15 @@ type ProductProp = {
 
 export const ProductList = ({ products }: ProductListProp) => {
   return (
-    <ul className="py-2 unstyled-list p-0 w-300px bg-green br-2 text-center">
+    <ul className="py-2 unstyled-list p-0 w-300px bg-green br-2 text-center position-relative">
       {products?.length &&
-        products.map((p: ProductProp) => (
-          <li className="p-2 white pointer text-white bt-white-1">{p.name}</li>
-        ))}
+        React.Children.toArray(
+          products.map((p: ProductProp) => (
+            <li className="p-2 white pointer text-white bt-white-1">
+              {p.name}
+            </li>
+          ))
+        )}
     </ul>
   );
 };
@@ -299,7 +298,7 @@ export const ProductCard = ({
             </Form.Select>
             <div className="ml-1">
               <div>
-                <span className="text-yellow">Qty</span>
+                <div className="text-yellow fs-0-8-rem mb-0-3">Qty</div>
               </div>
               <div className="d-flex align-center">
                 <Button
@@ -341,10 +340,11 @@ type ImageCarouselType = {
   images?: Array<string>;
 };
 const owlConfig = {
-  // loop: true,
+  loop: true,
   margin: 10,
-  items: 1,
-  autoWidth: true,
+  navigation: true,
+  singleItem: true,
+  responsiveClass: true,
   responsive: {
     0: {
       items: 1,
@@ -367,11 +367,9 @@ export const ImageCarousel = ({ images }: ImageCarouselType) => {
   return (
     <OwlCarousel {...owlConfig}>
       {images?.length &&
-        images.map((i: string) => (
-          <div className="w-350px">
-            <img src={i} className="w-100 " alt="" />
-          </div>
-        ))}
+        React.Children.toArray(
+          images.map((i: string) => <img src={i} className=" item" alt="" />)
+        )}
     </OwlCarousel>
   );
 };

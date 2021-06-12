@@ -11,16 +11,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12e7b538-ea45-4767-a8c7-28638918783d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/png/cat-fish-bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/png/contact-factory.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/png/worker-working-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/png/dotted-image-pattern-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/png/dotted-pattern.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/png/hand-washing-fish.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/png/pond-watet-fish.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/png/stack-off-fish.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/responsive.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Footer/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Footer/Footer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Footer/footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Footer/footer.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/PatekUI/PatekUi.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/PatekUI/PatekUi.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pages/About/About.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/About/About.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Contact/Contact.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Contact/Contact.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pages/Home/Home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Home/Home.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pages/Product/Product.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Product/Product.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +41,7 @@
         <option value="SCSS File" />
         <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -49,7 +58,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets/png" />
-    <property name="list.type.of.created.stylesheet" value="SCSS" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -63,6 +72,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/Pages" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -100,7 +110,7 @@
       <workItem from="1623075030476" duration="10586000" />
       <workItem from="1623189778787" duration="20673000" />
       <workItem from="1623329936171" duration="34556000" />
-      <workItem from="1623449878614" duration="8551000" />
+      <workItem from="1623449878614" duration="14411000" />
     </task>
     <servers />
   </component>
@@ -152,9 +162,9 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="413" y="189" width="613" height="522" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1623362643799" />
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1623491045197">
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1623536213366">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1623491045197" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1623536213366" />
   </component>
 </project>

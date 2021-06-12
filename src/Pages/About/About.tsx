@@ -139,8 +139,8 @@ Catfish from Hatchery to Oven"
         </div>
       </Section>
       <BottomCta
-        link="/"
-        linkText="Order Now"
+        link="/contact"
+        linkText="Contact Us"
         title={"Learn more about Patec Food"}
       />
       <Footer />

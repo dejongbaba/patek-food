@@ -13,6 +13,7 @@ import Footer from "../../Components/Footer/Footer";
 import kify from "../../assets/png/kify.png";
 import kifyPack from "../../assets/png/kify-smoked-african-catfish.png";
 import catFishProduct from "../../assets/png/catfDryFish.png";
+import dottenPattern from "../../assets/png/dotted-pattern.png";
 import worker from "../../assets/png/worker-working-bg.png";
 
 function Product() {
@@ -22,7 +23,11 @@ function Product() {
     { name: "Fish Tail" },
     { name: "Fish Steak" },
   ];
-  const productImages: string[] | undefined = [catFishProduct, catFishProduct];
+  const productImages: string[] | undefined = [
+    catFishProduct,
+    catFishProduct,
+    catFishProduct,
+  ];
   return (
     <div>
       <PageTop
@@ -90,13 +95,24 @@ function Product() {
         </div>
       </Section>
       <SectionWithFlex>
-        <div className="mr-3">
-          <h2 className="font-bold text-green">Order now</h2>
+        <div className="mr-3 position-relative">
+          <img
+            src={dottenPattern}
+            className="position-absolute top-left w-50"
+            alt=""
+          />
+          <h1 className="font-bold text-green position-relative z-1">
+            Order now
+          </h1>
           <ProductList products={prods} />
         </div>
         <ProductCard images={productImages} />
       </SectionWithFlex>
-      <BottomCta title="Learn more about Patec Food" link="/about" />
+      <BottomCta
+        title="Learn more about Patec Food"
+        linkText="About Us"
+        link="/about"
+      />
       <Footer />
     </div>
   );
