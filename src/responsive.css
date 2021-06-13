@@ -39,3 +39,10 @@
         right:inherit;
     }
 }
+
+@media (min-width: 480px){
+
+    .md-flex-row{
+        flex-direction: row;
+    }
+}

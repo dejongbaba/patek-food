@@ -1,12 +1,23 @@
+@import "../../styles/App";
+
 .top-nav{
   background-color: var(--secondary);
   color: var(--white);
-  justify-content: space-between;
   display: flex;
-  padding: 1rem;
+  flex-direction: column;
+  @include breakpoint(desktop-up){
+    padding: 1rem;
+    flex-direction: row;
+    justify-content: space-between;
+  }
   &-contact{
     align-items: center;
     display: flex;
+    flex-direction: column;
+    @include breakpoint(desktop-up){
+      flex-direction: row;
+    }
+
     img,i,a{
       margin-right: .5rem;
       //width: 15px;

@@ -148,7 +148,9 @@ export const SectionWithFlex = ({
   return (
     <Section className={className}>
       <div className="d-flex">
-        <div className={`w-60 mt--50 mx-auto d-flex ${flexClassName}`}>
+        <div
+          className={`w-60 mt--50 mx-auto d-flex flex-column md-flex-row ${flexClassName}`}
+        >
           {children}
         </div>
       </div>

@@ -5,7 +5,7 @@ import phoneCalling from "../../assets/svg/Calling.svg";
 
 function Footer() {
   return (
-    <footer className="w-70 d-flex mx-auto bg-pattern">
+    <footer className="w-70 d-flex flex-column md-flex-row mx-auto bg-pattern">
       <div className="p-2 flex-grow-1">
         <img className="w-100-px" src={footerLogo} alt="" />
         <div className="d-flex align-center">

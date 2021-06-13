@@ -5,6 +5,9 @@ import About from "./Pages/About/About";
 import Services from "./Pages/Services/Services";
 import Contact from "./Pages/Contact/Contact";
 import Product from "./Pages/Product/Product";
+import "./index.css";
+import "./responsive.css";
+
 function App() {
   return (
     <>
