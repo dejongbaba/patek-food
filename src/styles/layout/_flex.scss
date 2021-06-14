@@ -1,7 +1,6 @@
 /* ALIGNMENT */
 
 .flex-column {
-  display: flex;
   flex-direction: column;
 }
 .d-flex{
@@ -37,8 +36,9 @@
   justify-content: start;
 }
 
-
 .justify-space-between {
-  display: flex;
   justify-content: space-between;
+}
+.flex-reverse-column{
+  flex-direction: column-reverse;
 }

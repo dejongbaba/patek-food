@@ -2,10 +2,17 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../../assets/png/logo.png";
 import "./nav.scss";
-type NavType = {};
-function Nav(props: NavType) {
+
+const Nav = React.forwardRef<{
+  menu: React.RefObject<HTMLElement>;
+  hamburger: React.RefObject<HTMLButtonElement>;
+}>((prop, ref: any) => {
+  // @ts-ignore
   return (
-    <nav className="nav">
+    <nav className="nav" ref={ref}>
+      <NavLink activeClassName="active" to="/">
+        <img className="nav-logo" src={logo} alt="patek logo" />
+      </NavLink>
       <NavLink exact activeClassName="active" to="/">
         <span>Home</span>
       </NavLink>
@@ -23,6 +30,6 @@ function Nav(props: NavType) {
       </NavLink>
     </nav>
   );
-}
+});
 
 export default Nav;

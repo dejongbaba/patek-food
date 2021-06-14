@@ -58,38 +58,38 @@ function Product() {
       <h2 className="text-green text-center">The ‘Kify’ Catfish Promise</h2>
       <p className="text-center">At Patec Foods, our catfish products are:</p>
       <Section>
-        <div className="w-80 h-600 mx-auto position-relative">
-          <p className="yellow-dash text-yellow w-30 text-right position-absolute top-left-3">
+        <div className="md-w-80 md-h-600 mx-auto position-relative">
+          <p className="yellow-dash text-yellow md-w-30 text-right md-position-absolute top-left-3">
             Are thoroughly cleaned and produced in a conducive envoronment. No
             muddiness. Consistency in mood and taste
           </p>
-          <p className="yellow-dash text-green w-30 text-right position-absolute center-left-3">
+          <p className="yellow-dash text-green md-w-30 text-right md-position-absolute center-left-3">
             Are prepared in electric ovens without the use of coal. Hence, it
             has PAH and it is not carcinogenic
           </p>
 
-          <p className="green-dash text-yellow w-30 text-right position-absolute bottom-left-3">
+          <p className="green-dash text-yellow md-w-30 text-right md-position-absolute bottom-left-3">
             Has different size options. Cusotmers are presented with different
             size options to pick from and it can be repacked and sold to the
             final consumer
           </p>
           <img
-            className="w-40 center position-absolute"
+            className="md-w-40 center md-position-absolute"
             src={kifyPack}
             alt=""
           />
-          <p className="text-green w-30 position-absolute top-right-4">
+          <p className="text-green md-w-30 md-position-absolute top-right-4">
             Are completely eviscerated, making it ready-to-use in your meals
           </p>
-          <p className="text-yellow w-30 position-absolute center-right-3">
+          <p className="text-yellow md-w-30 md-position-absolute center-right-3">
             Are uniform in size. In every pack, you are guaranteed uniform size
             of fish
           </p>
-          <p className="text-green w-30 position-absolute center-right-4 ">
+          <p className="text-green md-w-30 md-position-absolute center-right-4 ">
             Has at least 6 months shelf life with quality and taste maintained
             during the period
           </p>
-          <p className="text-yellow w-30 position-absolute bottom-right-4">
+          <p className="text-yellow md-w-30 md-position-absolute bottom-right-4">
             Are consistently supplied to our customers based on their demand
           </p>
         </div>
@@ -98,7 +98,7 @@ function Product() {
         <div className="mr-3 position-relative">
           <img
             src={dottenPattern}
-            className="position-absolute top-left w-50"
+            className="md-position-absolute top-left w-50"
             alt=""
           />
           <h1 className="font-bold text-green position-relative z-1">

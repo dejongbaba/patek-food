@@ -63,7 +63,7 @@ Catfish from Hatchery to Oven"
           image={catFish}
         />
       </SectionWithFlex>
-      <div className="br-right-top-bottom-2 lh-regular position-relative p-5 mt-4 mb-5 bg-green-lighter w-70 ml-auto">
+      <div className="br-right-top-bottom-2 md-lh-regular position-relative p-5 mt-4 mb-5 bg-green-lighter md-w-70 ml-auto">
         We are committed to providing the best quality, oven dried catfish
         available in the marketplace, and because we are a vertically integrated
         catfish processor we can meet the high demands of the market
@@ -80,7 +80,7 @@ Catfish from Hatchery to Oven"
       <Section>
         <h2 className="text-green text-center mb-2">Our Key Success Factors</h2>
         <SectionWithFlex>
-          <div className="flex-grow-1 d-grid row-2 col-2 gap-2">
+          <div className="flex-grow-1 d-flex flex-column md-d-grid md-row-2 md-col-2 md-gap-2">
             <CardWithText
               className="w-100"
               image={acrylicTank}
@@ -128,11 +128,11 @@ Catfish from Hatchery to Oven"
         <ImageWithPattern
           image={foodSafety}
           bgPattern={bgSpiral}
-          bgPatternClassName="wh top-right-3"
+          bgPatternClassName="wh md-top-right-3"
         />
       </SectionWithFlex>
       <Section className="bg-staffs mh-100-vh position-relative">
-        <div className="position-absolute top-right-2 box-shadow-1 br-0-5 p-2 bg-white w-300px text-green">
+        <div className="position-absolute m-2 md-m-0 top-right-2 box-shadow-1 br-0-5 p-2 bg-white md-w-300px text-green">
           Our people are our greatest asset. We combine experience with
           technologies and insights to serve as the trusted partner for
           aquaculture products in Nigeria

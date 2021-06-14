@@ -5,8 +5,8 @@ import phoneCalling from "../../assets/svg/Calling.svg";
 
 function Footer() {
   return (
-    <footer className="w-70 d-flex flex-column md-flex-row mx-auto bg-pattern">
-      <div className="p-2 flex-grow-1">
+    <footer className="w-80 md-w-70 pb-2 md-pb-0 d-flex flex-column md-flex-row mx-auto bg-pattern">
+      <div className="md-p-2 flex-grow-1">
         <img className="w-100-px" src={footerLogo} alt="" />
         <div className="d-flex align-center">
           <img className="mr-1 " src={phoneCalling} alt="" />
@@ -16,16 +16,16 @@ function Footer() {
           </div>
         </div>
       </div>
-      <div className="p-2 flex-grow-1">
+      <div className="md-p-2 flex-grow-1">
         <p className="text-green">Links</p>
         <ul className="d-flex flex-wrap unstyled-list pl-0 text-gray">
           <li className="w-50">
-            <a className="text-undecorated text-gray" href="/home">
+            <a className="text-undecorated text-gray" href="/">
               Home
             </a>
           </li>
           <li className="w-50">
-            <a className="text-undecorated text-gray" href="/about-us">
+            <a className="text-undecorated text-gray" href="/about">
               About us
             </a>
           </li>
@@ -35,13 +35,13 @@ function Footer() {
             </a>
           </li>
           <li className="w-50">
-            <a className="text-undecorated text-gray" href="/contact-us">
+            <a className="text-undecorated text-gray" href="/contact">
               Contact Us
             </a>
           </li>
         </ul>
       </div>
-      <div className="p-2 flex-grow-1">
+      <div className="md-p-2 flex-grow-1">
         <p className="text-green">Subscribe to our Newsletter</p>
         <div className="d-flex">
           <input

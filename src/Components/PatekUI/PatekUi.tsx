@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React, { ReactNode, useRef } from "react";
 import yellowBg from "../../assets/png/yellow-bg.png";
 import leftBg from "../../assets/png/left-bg.png";
 import rightBg from "../../assets/png/right.png";
@@ -11,24 +11,29 @@ import backgroundSquare from "../../assets/png/background-square.png";
 import Button from "../Button/Button";
 import Form from "../Form/Form";
 import OwlCarousel from "react-owl-carousel";
+import useShowMenu from "../../hooks/useShowMenu";
 
 export const ProductSection = () => {
   return (
-    <div className="d-flex position-relative my-4 py-2 w-100 height-400">
-      <img className="position-absolute w-90 top-left" src={yellowBg} alt="" />
+    <div className="d-flex position-relative my-4 py-2 w-100 md-height-400">
+      <img
+        className="position-absolute d-none md-d-block w-90 top-left"
+        src={yellowBg}
+        alt=""
+      />
       <img className="position-absolute w-300px top-left" src={leftBg} alt="" />
       <img
         className="position-absolute w-300px top-right--4"
         src={rightBg}
         alt=""
       />
-      <div className="w-70 mx-auto d-flex align-center">
-        <img className="w-50" src={catFish} alt="" />
-        <div>
-          <h2 className="text-green lh-regular">
+      <div className="w-80 md-w-70 mx-auto d-flex flex-column md-flex-row align-center">
+        <img className="w-100 md-w-50" src={catFish} alt="" />
+        <div className="text-center md-text-left">
+          <h2 className="text-green md-lh-regular">
             High quality products using high quality standards
           </h2>
-          <p className="lh-regular">
+          <p className="md-lh-regular">
             Our oven dried catfish is filled with protein and other essential
             vitamins and minerals, and have a consistent mild flavor. A tasty
             local farm-raised catfish recipe will please even the pickiest
@@ -49,10 +54,14 @@ export const PageTop = ({
   image,
   linkText = "Learn More",
 }: Partial<PageTopType>) => {
+  const menu = useRef<HTMLElement>(null);
+  const hamBurger = useRef<HTMLButtonElement>(null);
+  useShowMenu(hamBurger, menu);
   return (
     <>
-      <TopNav />
-      <Nav />
+      <TopNav ref={hamBurger} />
+      {/*@ts-ignore */}
+      <Nav ref={menu} />
       <Header
         image={image}
         title={title}
@@ -87,14 +96,14 @@ export const TextWithPattern = ({
 }: TextWithPatternProps) => {
   return (
     <div
-      className={`lh-regular position-relative align-center flex-grow-1 flex-basis-50-p-cent w-50 ${className}`}
+      className={`md-lh-regular position-relative align-center flex-grow-1 flex-basis-50-p-cent md-w-50 ${className}`}
     >
       {children}
       {pattern && (
-        <div className="rectangle top-left bg-light-yellow position-absolute" />
+        <div className="rectangle bottom-left-4 md-top-left bg-light-yellow position-absolute" />
       )}
-      <h2 className={titleClassName}>{title}</h2>
-      <p className={`lh-regular ${descClassName}`}>{desc}</p>
+      <h2 className={`fs-1-8 ${titleClassName}`}>{title}</h2>
+      <p className={`md-lh-regular ${descClassName}`}>{desc}</p>
     </div>
   );
 };
@@ -114,7 +123,7 @@ export const ImageWithPattern = ({
 }: ImageWithPatternProps) => {
   return (
     <div
-      className={`w-50 flex-basis-50-p-cent flex-grow-1 position-relative ${className}`}
+      className={`md-w-50 flex-basis-50-p-cent flex-grow-1 position-relative ${className}`}
     >
       {image && <img className="w-100 z-1" src={image} alt="catfish factory" />}
       {bgPattern && (
@@ -134,7 +143,7 @@ type SectionProps = {
 };
 
 export function Section({ children, className = "" }: SectionProps) {
-  return <section className={`mh-500-px ${className}`}>{children}</section>;
+  return <section className={`mh-450-px ${className}`}>{children}</section>;
 }
 
 type SectionWithFlexProp = SectionProps & {
@@ -149,7 +158,7 @@ export const SectionWithFlex = ({
     <Section className={className}>
       <div className="d-flex">
         <div
-          className={`w-60 mt--50 mx-auto d-flex flex-column md-flex-row ${flexClassName}`}
+          className={`w-80 md-w-60 mt--50 mx-auto d-flex flex-column md-flex-row ${flexClassName}`}
         >
           {children}
         </div>
@@ -169,8 +178,8 @@ export function BottomCta({
   link,
 }: Partial<CtaProp>) {
   return (
-    <div className="bg-green d-flex justify-space-around align-center text-white w-80 h-150 br-2 my-5 mx-auto">
-      <h2 className="w-40 text-white">{title}</h2>
+    <div className="bg-green p-1 md-p-0 d-flex justify-space-around flex-column md-flex-row align-center text-white w-80 md-h-150 br-2 my-5 mx-auto">
+      <h2 className="md-w-40 text-white text-center md-text-left">{title}</h2>
       <a
         href={link}
         className="bg-white no-decoration pointer text-green d-flex align-center justify-center no-border br-1 text-center w-150 h-50"
@@ -190,8 +199,8 @@ export const CircularImageWithSpiral = ({
   title,
 }: Partial<CircularImageProp>) => {
   return (
-    <div className="text-center">
-      <div className="spiral-img circle">
+    <div className="text-center mb-2 md-mb-0">
+      <div className="spiral-img d-flex align-center flex-column  circle">
         <img src={image} className="w-100" alt="" />;
       </div>
       <p className="mt-3 fs-1-2 text-green">{title}</p>
@@ -240,16 +249,18 @@ export const Timeline = ({ data }: Partial<TimelineProps>) => {
     <div className="timeline">
       <ul>
         {data?.length
-          ? data.map((d: TimelineDataProps) => {
-              return (
-                <li>
-                  <div className="right_content">
-                    <h2>{d.title}</h2>
-                    <p>{d.description}</p>
-                  </div>
-                </li>
-              );
-            })
+          ? React.Children.toArray(
+              data.map((d: TimelineDataProps) => {
+                return (
+                  <li>
+                    <div className="right_content">
+                      <h2>{d.title}</h2>
+                      <p>{d.description}</p>
+                    </div>
+                  </li>
+                );
+              })
+            )
           : null}
         <div style={{ clear: "both" }} />
       </ul>
@@ -294,7 +305,7 @@ export const ProductCard = ({
       <ImageCarousel images={images} />
       <div className="d-flex align-start">
         <div className="mr-3 w-100">
-          <div className="d-flex align-start">
+          <div className="d-flex flex-column md-flex-row align-start">
             <Form.Select className="flex-grow-1" label="Size" name={""}>
               <option value="">Whole (80g - 110g)</option>
             </Form.Select>
@@ -318,7 +329,7 @@ export const ProductCard = ({
             </div>
           </div>
 
-          <div className="d-flex mb-2">
+          <div className="d-flex flex-column md-flex-row mb-2">
             <Form.CheckBox name="" label="N 4560(Kilogram)" />
             <Form.CheckBox name="" label="N 4560(Kilogram)" />
           </div>

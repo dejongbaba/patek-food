@@ -6,15 +6,22 @@
   position: fixed;
   z-index: 100;
   width: 100%;
-  //display: flex;
+  align-items: center;
+  top:0;
   height: 100vh;
+  opacity: 0;
+  visibility: hidden;
   background:var(--white);
+
   @include breakpoint(desktop-up){
-    position: relative;
+    top:unset;
     display: flex;
+    position: relative;
     align-items: center;
     justify-content: center;
     flex-direction: row;
+    opacity: 1;
+    visibility: visible;
     height: unset;
   }
   &-logo{
@@ -25,13 +32,30 @@
     margin: 1rem 2rem;
     color: var(--black);
     display: block;
-    font-weight: normal;
+    font-weight: bold;
     font-family: var(--dm-sans);
     text-decoration: none;
     position: relative;
     cursor:pointer;
     transition: all .3s ease-in-out;
+    &:nth-of-type(4){
+      display: none;
+    }
+    &:nth-of-type(1):hover::after,&:nth-of-type(1).active::after{
+      content: none;
+    }
 
+    @include breakpoint(desktop-up){
+      &:first-of-type{
+        display: none;
+      }
+      &:nth-of-type(4){
+        display: flex;
+      }
+      &:nth-of-type(4):hover::after,&:nth-of-type(4).active::after{
+        content: none;
+      }
+    }
     span{
       position: relative;
       z-index: 3;
@@ -46,13 +70,17 @@
   a:hover::after,a.active::after {
     content: '';
     position: absolute;
+    background-color: var(--primary);
+    height: 7px;
+    width: 100%;
     bottom: 2px;
     left: 0;
-    width: 100%;
-    height: 7px;
-    background-color: var(--primary);
   }
-  a:nth-of-type(3):hover::after,a:nth-of-type(3).active::after{
-    content: none;
+
+  &.open{
+    opacity: 1;
+    visibility: visible;
+    display: flex;
   }
 }
+

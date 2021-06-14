@@ -17,8 +17,13 @@ function Header({
   linkText,
 }: Partial<HeaderType>) {
   return (
-    <div className="header">
-      <img src={image} alt="" />
+    <div
+      className="header"
+      style={{
+        backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%),url(${image}`,
+      }}
+    >
+      {/*<img src={image} alt="" />*/}
       <div className="header-center">
         <h1 className="header-title">{title}</h1>
         <p className="header-description">{description} </p>

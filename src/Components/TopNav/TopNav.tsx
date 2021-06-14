@@ -1,10 +1,12 @@
 import React from "react";
 import "./TopNav.scss";
-type TopNavType = {};
 
-function TopNav(props: TopNavType) {
+const TopNav = React.forwardRef<HTMLButtonElement>((props, ref) => {
   return (
-    <div className="top-nav">
+    <div className="top-nav position-relative">
+      <div className="pf-nav-hamburger position-absolute top-right">
+        <button className="pf-nav-hamburger-button" ref={ref} />
+      </div>
       <div className="top-nav-social">
         <a href="www.facebook.com" target="_blank">
           <i className="fa-1x fab fa-facebook" />
@@ -36,6 +38,6 @@ function TopNav(props: TopNavType) {
       </div>
     </div>
   );
-}
+});
 
 export default TopNav;

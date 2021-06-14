@@ -15,8 +15,8 @@ function Contact(props: AboutType) {
   return (
     <div>
       <PageTop image={contactFactory} title="Get in Touch with Us" />
-      <div className="-mt-50 w-70 mx-auto position-relative z-1 d-grid col-3 row-1">
-        <CardWithText className="bg-white d-flex flex-column justify-center align-center text-center box-shadow-1 p-2 font-bold">
+      <div className="md--mt-50 w-70 mx-auto position-relative z-1 md-d-grid md-col-3 md-row-1 md-gap-2">
+        <CardWithText className="bg-white mt-2 md-mt-0 d-flex flex-column justify-center align-center text-center box-shadow-1 p-2 font-bold">
           <i className="fa fas fa-phone text-green text-center" />
           <p className=" text-green">+234 802 9432 334</p>
         </CardWithText>{" "}
@@ -40,12 +40,12 @@ function Contact(props: AboutType) {
       <h2 className="text-green text-center">Get in Touch with Us</h2>
       <Section>
         <Form className="w-100">
-          <div className="d-flex align-center">
-            <Form.Input className="mr-1" label="Name" type="text" />
+          <div className="d-flex flex-column md-flex-row align-center">
+            <Form.Input className="md-mr-1" label="Name" type="text" />
             <Form.Input label="Phone" type="text" />
           </div>
-          <div className="d-flex align-center">
-            <Form.Input className="mr-1" label="Email" type="email" />
+          <div className="d-flex flex-column md-flex-row align-center">
+            <Form.Input className="md-mr-1" label="Email" type="email" />
             <Form.Select label="Reason">
               <option value="">Order</option>
               <option value="">Order</option>
