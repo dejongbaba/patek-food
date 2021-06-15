@@ -40,6 +40,7 @@ function Product() {
       <SectionWithFlex flexClassName="align-center">
         <ImageWithPattern image={kify} bgPattern="" />
         <TextWithPattern pattern={false} title="" desc="">
+          <h2 className="text-green font-bold fs-2">Our products</h2>
           <p className="text-green">
             Produced to high quality standards, Patec Foods dried smoked fish is
             packaged under the brand name ‘Kify’, targeted at Wholesalers,
@@ -48,33 +49,42 @@ function Product() {
             minerals, and have a consistent mild flavor. A tasty local
             farm-raised catfish recipe will please even the pickiest eaters.
           </p>
-          <div className="d-flex align-center">
+          <div className="d-flex align-center fs-1-8">
             <i className="fa-1x fab fa-facebook mr-1 text-yellow" />
             <i className="fa-1x fab fa-linkedin mr-1 text-yellow" />
             <i className="fa-1x fab fa-instagram mr-1 text-yellow" />
           </div>
         </TextWithPattern>
       </SectionWithFlex>
-      <h2 className="text-green text-center">The ‘Kify’ Catfish Promise</h2>
-      <p className="text-center">At Patec Foods, our catfish products are:</p>
+      <h2 className="text-green  fs-2 w-80 md-w-100 mx-auto md-text-center">
+        The ‘Kify’ Catfish Promise
+      </h2>
+      <p className="w-80 md-w-100 mx-auto md-text-center">
+        At Patec Foods, our catfish products are:
+      </p>
       <Section>
-        <div className="md-w-80 md-h-600 mx-auto position-relative">
-          <p className="yellow-dash text-yellow md-w-30 text-right md-position-absolute top-left-3">
+        <div className="w-80 md-h-600 mx-auto position-relative">
+          <img
+            className="d-block md-d-none  w-100 position-relative center-left-4"
+            src={kifyPack}
+            alt=""
+          />
+          <p className="md-yellow-dash text-yellow md-w-30 md-text-right md-position-absolute top-left-3">
             Are thoroughly cleaned and produced in a conducive envoronment. No
             muddiness. Consistency in mood and taste
           </p>
-          <p className="yellow-dash text-green md-w-30 text-right md-position-absolute center-left-3">
+          <p className="md-yellow-dash text-green md-w-30 md-text-right md-position-absolute center-left-5">
             Are prepared in electric ovens without the use of coal. Hence, it
             has PAH and it is not carcinogenic
           </p>
 
-          <p className="green-dash text-yellow md-w-30 text-right md-position-absolute bottom-left-3">
+          <p className="md-green-dash text-yellow md-w-30 md-text-right md-position-absolute bottom-left-5">
             Has different size options. Cusotmers are presented with different
             size options to pick from and it can be repacked and sold to the
             final consumer
           </p>
           <img
-            className="md-w-40 center md-position-absolute"
+            className="d-none md-d-block  md-w-40 center md-position-absolute"
             src={kifyPack}
             alt=""
           />
@@ -95,7 +105,7 @@ function Product() {
         </div>
       </Section>
       <SectionWithFlex>
-        <div className="mr-3 position-relative">
+        <div className="md-mr-3 position-relative">
           <img
             src={dottenPattern}
             className="md-position-absolute top-left w-50"

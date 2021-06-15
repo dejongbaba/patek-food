@@ -49,10 +49,16 @@
     .md-d-block{
         display: block;
     }
+    .md-d-none{
+        display: none;
+    }
 
     /*widths */
     .md-w-60{
         width: 60%;
+    }
+    .md-w-100{
+        width: 100%;
     }
     .md-w-70{
         width: 70%;
@@ -102,6 +108,9 @@
     .md-mt-0{
         margin-top: 0;
     }
+    .md-ml-1{
+        margin-left: 1rem;
+    }
     .md-mt-4{
         margin-top: 4rem;
     }
@@ -132,7 +141,10 @@
         padding-left:0 ;
         padding-right:0 ;
     }
-
+    .md-px-5{
+        padding-right: 5rem;
+        padding-left: 5rem;
+    }
     .md-pb-0{
         padding-bottom: 0;
     }
@@ -164,12 +176,41 @@
         width: auto;
         height: auto;
     }
+    .md-yellow-dash,.md-green-dash{
+        position: relative;
+    }
+    .md-yellow-dash:before{
+        content: "";
+        display: block;
+        width: 40px;
+        height: .5rem;
+        right: 0;
+        margin-left: auto;
+        background-color: var(--secondary);
+        margin-bottom: .5rem;
+    }
+    .md-green-dash:before{
+        content: "";
+        right: 0;
+        display: block;
+        margin-left: auto;
+        margin-bottom: .5rem;
+        background-color: var(--primary);
+        width: 40px;
+        height: .5rem;
+    }
 
 /*    text alignment*/
     .md-text-left{
         text-align: left;
     }
 
+    .md-text-center{
+        text-align: center;
+    }
+    .md-text-right {
+        text-align: right;
+    }
 /*    positioning*/
     .md-position-absolute{
         position: absolute;

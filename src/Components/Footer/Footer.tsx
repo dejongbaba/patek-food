@@ -2,10 +2,17 @@ import React from "react";
 import "./footer.scss";
 import footerLogo from "../../assets/png/logo.png";
 import phoneCalling from "../../assets/svg/Calling.svg";
+import cartIcon from "../../assets/png/shopping-cart.png";
 
 function Footer() {
   return (
-    <footer className="w-80 md-w-70 pb-2 md-pb-0 d-flex flex-column md-flex-row mx-auto bg-pattern">
+    <footer className="w-80 md-w-70 pb-2 md-pb-0 d-flex position-relative flex-column md-flex-row mx-auto bg-pattern">
+      <div className="br-50-p-cent d-flex align-center  position-fixed justify-center bg-green bottom-right-2 w-70-px h-70-px">
+        <img className="w-30" src={cartIcon} alt="" />
+        <div className="bg-white br-50-p-cent box-shadow-1 w-30px h-30 d-flex position-absolute top-right-5 align-center justify-center">
+          4
+        </div>
+      </div>
       <div className="md-p-2 flex-grow-1">
         <img className="w-100-px" src={footerLogo} alt="" />
         <div className="d-flex align-center">

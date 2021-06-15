@@ -278,7 +278,7 @@ type ProductProp = {
 
 export const ProductList = ({ products }: ProductListProp) => {
   return (
-    <ul className="py-2 unstyled-list p-0 w-300px bg-green br-2 text-center position-relative">
+    <ul className="py-2 unstyled-list p-0 md-w-300px bg-green br-2 text-center position-relative">
       {products?.length &&
         React.Children.toArray(
           products.map((p: ProductProp) => (
@@ -300,16 +300,16 @@ export const ProductCard = ({
   name = "WholeFish",
 }: Partial<ProductCardType>) => {
   return (
-    <div className="p-2 w-70 box-shadow-1 br-2">
+    <div className="p-2 md-w-70 box-shadow-1 br-2">
       <h3>{name}</h3>
       <ImageCarousel images={images} />
       <div className="d-flex align-start">
-        <div className="mr-3 w-100">
+        <div className="md-mr-3 w-100">
           <div className="d-flex flex-column md-flex-row align-start">
             <Form.Select className="flex-grow-1" label="Size" name={""}>
               <option value="">Whole (80g - 110g)</option>
             </Form.Select>
-            <div className="ml-1">
+            <div className="md-ml-1">
               <div>
                 <div className="text-yellow fs-0-8-rem mb-0-3">Qty</div>
               </div>
@@ -339,7 +339,7 @@ export const ProductCard = ({
       <Button
         type="button"
         title="Add to Cart"
-        className="w-100 btn-green px-5 py-1 br-0-5 no-border text-center"
+        className="w-100 btn-green md-px-5 py-1 br-0-5 no-border text-center"
       />
       <p className="text-gray text-center">
         {" "}
