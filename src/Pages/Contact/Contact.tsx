@@ -96,7 +96,6 @@ function Contact() {
         <Form className="w-100">
           <div className="d-flex flex-column md-flex-row align-center">
             <Form.Input className="md-mr-1" label="Name" type="text" />
-            <Form.Input label="Phone" type="text" />
             <Form.Input
               // // @ts-ignore
               // ref={register({
@@ -105,13 +104,27 @@ function Contact() {
               //     message: "input correct email",
               //   },
               // })}
-              name={"from_email"}
-              type={"email"}
-              placeHolder={"email"}
+              label={"Phone"}
+              name={"from_phone"}
+              type={"text"}
+              placeHolder={"Enter phone number"}
             />
           </div>
           <div className="d-flex flex-column md-flex-row align-center">
-            <Form.Input className="md-mr-1" label="Email" type="email" />
+            <Form.Input
+              // // @ts-ignore
+              // ref={register({
+              //   required: true,
+              //   pattern: {
+              //     message: "input correct email",
+              //   },
+              // })}
+              label={"Email"}
+              className="md-mr-1"
+              name={"from_email"}
+              type={"email"}
+              placeHolder={"Enter email"}
+            />
             <Form.Select label="Reason">
               <option value="">Order</option>
               <option value="">Order</option>
