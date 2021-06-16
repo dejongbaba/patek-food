@@ -1,6 +1,7 @@
 import React from "react";
 import "./Header.scss";
 import headerImg from "../../assets/png/frog-patek.png";
+
 export type HeaderType = {
   image: string;
   title: string;

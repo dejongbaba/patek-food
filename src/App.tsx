@@ -7,19 +7,22 @@ import Contact from "./Pages/Contact/Contact";
 import Product from "./Pages/Product/Product";
 import "./index.css";
 import "./responsive.css";
+import { ToastProvider } from "react-toast-notifications";
 
 function App() {
   return (
     <>
-      <Router>
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/about" component={About} />
-          <Route exact path="/services" component={Services} />
-          <Route exact path="/contact" component={Contact} />
-          <Route exact path="/products" component={Product} />
-        </Switch>
-      </Router>
+      <ToastProvider>
+        <Router>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/about" component={About} />
+            <Route exact path="/services" component={Services} />
+            <Route exact path="/contact" component={Contact} />
+            <Route exact path="/products" component={Product} />
+          </Switch>
+        </Router>
+      </ToastProvider>
     </>
   );
 }

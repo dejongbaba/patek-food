@@ -67,7 +67,7 @@ body {
 }
 .bg-staffs{
   background: url("assets/png/staff-images.png") no-repeat top center;
-  background-size: 100% 100%;
+  background-size: cover;
 }
 
 /*background*/
@@ -275,6 +275,14 @@ body {
   top: 10%;
   right: 0%;
 }
+.top-right-6{
+  top: 35%;
+  right: 0%;
+}
+.top-center{
+  top: 65%;
+  right: 33%;
+}
 .top-right-2{
   top: 10%;
   right: 10%;
@@ -436,6 +444,7 @@ body {
 .card{
   width: auto;
   height: auto;
+  overflow: hidden;
 }
 
 /*pattern */
@@ -603,6 +612,9 @@ body {
 }
 .mt-3 {
   margin-top: 3rem;
+}
+.mb-0{
+  margin-bottom: 0;
 }
 .mb-0-5 {
   margin-bottom: 0.5rem;

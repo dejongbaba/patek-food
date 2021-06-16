@@ -8,10 +8,64 @@ import Footer from "../../Components/Footer/Footer";
 import Form from "../../Components/Form/Form";
 import Button from "../../Components/Button/Button";
 import contactFactory from "../../assets/png/contact-factory.png";
+// import { useForm } from "react-hook-form";
+// import emailjs from "emailjs-com";
+// import { useToasts } from "react-toast-notifications";
 
-type AboutType = {};
-
-function Contact(props: AboutType) {
+function Contact() {
+  // const [, setLoading] = useState(false);
+  // const { addToast } = useToasts();
+  //
+  // const defaultValues = {
+  //   from_email: "",
+  //   from_name: "",
+  //   message: "",
+  // };
+  // const { register, handleSubmit, reset } = useForm({
+  //   defaultValues,
+  // });
+  // const onSubmit = (data: { [key: string]: string }) => {
+  //   sendEmail(data);
+  // };
+  //
+  // function sendEmail(data: { [key: string]: string }) {
+  //   setLoading(true);
+  //   console.log(
+  //     process.env.REACT_APP_SERVICE_ID,
+  //     process.env.REACT_APP_TEMPLATE_ID,
+  //     data,
+  //     process.env.REACT_APP_USER_ID
+  //   );
+  //
+  //   emailjs
+  //     .send(
+  //       // @ts-ignore
+  //       process.env.REACT_APP_SERVICE_ID,
+  //       process.env.REACT_APP_TEMPLATE_ID,
+  //       data,
+  //       process.env.REACT_APP_USER_ID
+  //     )
+  //     .then(
+  //       (result) => {
+  //         console.log("success", result);
+  //         setLoading(false);
+  //         addToast("Email Sent! I will reach out to you personally!", {
+  //           appearance: "success",
+  //           autoDismiss: true,
+  //         });
+  //         reset({ from_email: "", from_name: "", message: "" });
+  //       },
+  //       (error) => {
+  //         setLoading(false);
+  //         addToast("An Error occurred trying to send the email!", {
+  //           appearance: "error",
+  //           autoDismiss: true,
+  //         });
+  //         console.log("error", error);
+  //       }
+  //     );
+  // }
+  // @ts-ignore
   return (
     <div>
       <PageTop image={contactFactory} title="Get in Touch with Us" />
@@ -43,6 +97,18 @@ function Contact(props: AboutType) {
           <div className="d-flex flex-column md-flex-row align-center">
             <Form.Input className="md-mr-1" label="Name" type="text" />
             <Form.Input label="Phone" type="text" />
+            <Form.Input
+              // @ts-ignore
+              ref={register({
+                required: true,
+                pattern: {
+                  message: "input correct email",
+                },
+              })}
+              name={"from_email"}
+              type={"email"}
+              placeHolder={"email"}
+            />
           </div>
           <div className="d-flex flex-column md-flex-row align-center">
             <Form.Input className="md-mr-1" label="Email" type="email" />
@@ -51,7 +117,12 @@ function Contact(props: AboutType) {
               <option value="">Order</option>
             </Form.Select>
           </div>
-          <Form.TextArea name="Message" label="Message" />
+          <Form.TextArea
+            name={"message"}
+            // @ts-ignore
+            ref={register}
+            placeHolder={"message"}
+          />
           <Button
             type="submit"
             className="btn-green text-white br-1 no-border py-1 px-5"

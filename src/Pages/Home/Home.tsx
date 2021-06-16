@@ -48,7 +48,9 @@ function Home() {
           desc="We provide a constant and controlled environment for the fish, allowing for optimal and fully manageable production of African catfish.
 All our fish are grain fed from locally grown and processed feed containing no hormones or antibiotics of any kind. This ensures a healthy tasty product. "
         >
-          <small>Delivering Excellence from Egg to Harvest</small>
+          <small className="font-pacifico">
+            Delivering Excellence from Egg to Harvest
+          </small>
         </TextWithPattern>
         <div className="position-absolute bg-light-yellow center-right-2 w-90 h-350 br-left-2" />
       </SectionWithFlex>

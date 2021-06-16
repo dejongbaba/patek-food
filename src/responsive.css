@@ -11,6 +11,8 @@
     }
     .timeline:before{
         left:20px;
+        top: 41px;
+        bottom: 230px;
     }
     .timeline ul li:nth-child(odd),
     .timeline ul li:nth-child(even){
@@ -21,13 +23,13 @@
 
     .timeline ul li:nth-child(odd):before
     {
-        top:-18px;
+        top:41px;
         left:16px;
 
     }
     .timeline ul li:nth-child(even):before
     {
-        top:-18px;
+        top:40px;
         left:16px;
     }
 
@@ -42,6 +44,10 @@
 
 @media (min-width: 480px){
 
+    /**/
+    .bg-staff{
+        background: 100% 100%;
+    }
     /* display */
     .md-flex-row{
         flex-direction: row;
@@ -129,6 +135,9 @@
     .md-mr-3{
         margin-right: 3rem;
     }
+    .md-mb-initial{
+        margin-bottom: initial;
+    }
 
     /*paddings*/
     .md-p-2{
@@ -141,12 +150,18 @@
         padding-left:0 ;
         padding-right:0 ;
     }
+    .md-p-5{
+        padding: 5rem;
+    }
     .md-px-5{
         padding-right: 5rem;
         padding-left: 5rem;
     }
     .md-pb-0{
         padding-bottom: 0;
+    }
+    .md-pb-2{
+        padding-bottom: 2rem;
     }
     /*grid*/
     .md-d-grid{

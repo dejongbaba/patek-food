@@ -1,12 +1,18 @@
 import React from "react";
 import "./TopNav.scss";
-
+import logoIcon from "../../assets/png/logo.png";
 const TopNav = React.forwardRef<HTMLButtonElement>((props, ref) => {
   return (
     <div className="top-nav position-relative">
-      <div className="pf-nav-hamburger position-absolute top-right">
+      <div className="pf-nav-hamburger position-absolute top-right-6">
         <button className="pf-nav-hamburger-button" ref={ref} />
       </div>
+      <img
+        alt=""
+        src={logoIcon}
+        className="w-30 md-d-none position-absolute top-center"
+      />
+
       <div className="top-nav-social">
         <a href="www.facebook.com" target="_blank">
           <i className="fa-1x fab fa-facebook" />

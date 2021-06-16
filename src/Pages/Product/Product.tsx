@@ -56,7 +56,7 @@ function Product() {
           </div>
         </TextWithPattern>
       </SectionWithFlex>
-      <h2 className="text-green  fs-2 w-80 md-w-100 mx-auto md-text-center">
+      <h2 className="text-green fs-2 w-80 md-w-100 mx-auto md-text-center">
         The ‘Kify’ Catfish Promise
       </h2>
       <p className="w-80 md-w-100 mx-auto md-text-center">

@@ -226,7 +226,7 @@ export const CardWithText = ({
     <div className={`card mb-2 br-2 bg-green-light ${className}`}>
       {image && <img className="w-100" src={image} alt="" />}
       {title && description && (
-        <div className="p-2 text-green">
+        <div className="p-1 md-p-2 text-green">
           <h3>{title}</h3>
           <p>{description}</p>
         </div>
