@@ -14,28 +14,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12e7b538-ea45-4767-a8c7-28638918783d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/png/efficient-circulating-system.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/png/efficient-filteration.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/png/heathy-farm-fish.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/png/over-dried-fish.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Footer/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Footer/Footer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Header/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/PatekUI/PatekUi.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/PatekUI/PatekUi.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/TopNav/TopNav.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/TopNav/TopNav.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/TopNav/TopNav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/TopNav/TopNav.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/About/About.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/About/About.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pages/Contact/Contact.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Contact/Contact.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Home/Home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Home/Home.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Product/Product.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Product/Product.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/responsive.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/responsive.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +98,7 @@
       <workItem from="1623189778787" duration="20673000" />
       <workItem from="1623329936171" duration="34556000" />
       <workItem from="1623449878614" duration="42460000" />
-      <workItem from="1623790644221" duration="7115000" />
+      <workItem from="1623790644221" duration="7199000" />
     </task>
     <servers />
   </component>

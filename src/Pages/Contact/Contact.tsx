@@ -98,13 +98,13 @@ function Contact() {
             <Form.Input className="md-mr-1" label="Name" type="text" />
             <Form.Input label="Phone" type="text" />
             <Form.Input
-              // @ts-ignore
-              ref={register({
-                required: true,
-                pattern: {
-                  message: "input correct email",
-                },
-              })}
+              // // @ts-ignore
+              // ref={register({
+              //   required: true,
+              //   pattern: {
+              //     message: "input correct email",
+              //   },
+              // })}
               name={"from_email"}
               type={"email"}
               placeHolder={"email"}
@@ -120,7 +120,7 @@ function Contact() {
           <Form.TextArea
             name={"message"}
             // @ts-ignore
-            ref={register}
+            // ref={register}
             placeHolder={"message"}
           />
           <Button
