@@ -7,11 +7,13 @@ const TopNav = React.forwardRef<HTMLButtonElement>((props, ref) => {
       <div className="pf-nav-hamburger position-absolute top-right-6">
         <button className="pf-nav-hamburger-button" ref={ref} />
       </div>
-      <img
-        alt=""
-        src={logoIcon}
-        className="w-30 md-d-none position-absolute top-center"
-      />
+      <div className="position-absolute logo-area bg-white h-50-px w-100">
+        <img
+          alt=""
+          src={logoIcon}
+          className="w-30 md-d-none position-absolute"
+        />
+      </div>
 
       <div className="top-nav-social">
         <a href="www.facebook.com" target="_blank">
@@ -34,6 +36,7 @@ const TopNav = React.forwardRef<HTMLButtonElement>((props, ref) => {
           <span>+234 802 9432 334</span>
         </a>
         <a
+          className="d-none md-d-flex"
           href="mailto:info@patecfoods.com"
           target="_blank"
           rel="noopener noreferrer"

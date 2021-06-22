@@ -55,6 +55,9 @@
     .md-d-block{
         display: block;
     }
+    .md-d-flex{
+        display: flex;
+    }
     .md-d-none{
         display: none;
     }
