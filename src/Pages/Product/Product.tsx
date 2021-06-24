@@ -38,10 +38,10 @@ function Product() {
         description="We employ the most technologically advanced fish production equipment in the industry. "
       />
       <SectionWithFlex flexClassName="align-center">
-        <ImageWithPattern image={kify} bgPattern="" />
+        <ImageWithPattern className="mr-3" image={kify} bgPattern="" />
         <TextWithPattern pattern={false} title="" desc="">
           <h2 className="text-green font-bold fs-2">Our products</h2>
-          <p className="text-green">
+          <p className="text-green mt-0 mb-2">
             Produced to high quality standards, Patec Foods dried smoked fish is
             packaged under the brand name ‘Kify’, targeted at Wholesalers,
             Retail Stores, HORECAs and Africans in Diaspora. Our oven dried

@@ -28,6 +28,7 @@ const TopNav = React.forwardRef<HTMLButtonElement>((props, ref) => {
       </div>
       <div className="top-nav-contact">
         <a
+          className="md-d-flex align-center"
           href="tel:+234 802 9432 334"
           target="_blank"
           rel="noopener noreferrer"
@@ -36,7 +37,7 @@ const TopNav = React.forwardRef<HTMLButtonElement>((props, ref) => {
           <span>+234 802 9432 334</span>
         </a>
         <a
-          className="d-none md-d-flex"
+          className="d-none md-d-flex align-center"
           href="mailto:info@patecfoods.com"
           target="_blank"
           rel="noopener noreferrer"

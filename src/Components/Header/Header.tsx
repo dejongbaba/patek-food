@@ -1,7 +1,7 @@
 import React from "react";
 import "./Header.scss";
 import headerImg from "../../assets/png/frog-patek.png";
-
+import { Link } from "react-router-dom";
 export type HeaderType = {
   image: string;
   title: string;
@@ -14,7 +14,7 @@ function Header({
   image = headerImg,
   title,
   description,
-  link,
+  link = "",
   linkText,
 }: Partial<HeaderType>) {
   return (
@@ -28,9 +28,9 @@ function Header({
       <div className="header-center">
         <h1 className="header-title">{title}</h1>
         <p className="header-description">{description} </p>
-        <a href={link} className="header-button">
+        <Link to={link} className="header-button">
           {linkText}
-        </a>
+        </Link>
       </div>
     </div>
   );

@@ -11,6 +11,7 @@ import backgroundSquare from "../../assets/png/background-square.png";
 import Button from "../Button/Button";
 import Form from "../Form/Form";
 import OwlCarousel from "react-owl-carousel";
+import { Link } from "react-router-dom";
 import useShowMenu from "../../hooks/useShowMenu";
 
 export const ProductSection = () => {
@@ -175,17 +176,17 @@ type CtaProp = {
 export function BottomCta({
   title = "Buy healthy controlled Catfish from Hatchery to Oven",
   linkText = "Order Button",
-  link,
+  link = "",
 }: Partial<CtaProp>) {
   return (
     <div className="bg-green p-1 md-p-0 d-flex justify-space-around flex-column md-flex-row align-center text-white w-80 md-h-150 br-2 my-5 mx-auto">
       <h2 className="md-w-40 text-white text-center md-text-left">{title}</h2>
-      <a
-        href={link}
+      <Link
+        to={link}
         className="bg-white no-decoration pointer text-green d-flex align-center justify-center no-border br-1 text-center w-150 h-50"
       >
         {linkText}
-      </a>
+      </Link>
     </div>
   );
 }

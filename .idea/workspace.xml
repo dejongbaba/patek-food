@@ -14,10 +14,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12e7b538-ea45-4767-a8c7-28638918783d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Components/ScrollToTop/ScrollToTop.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Footer/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Footer/Footer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Header/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/PatekUI/PatekUi.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/PatekUI/PatekUi.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/TopNav/TopNav.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/TopNav/TopNav.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/TopNav/TopNav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/TopNav/TopNav.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/responsive.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/responsive.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Product/Product.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Product/Product.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,9 +36,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="SCSS File" />
-        <option value="TypeScript JSX File" />
         <option value="CSS File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -60,16 +68,16 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/Pages" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/assets/png" />
       <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/src/Components" />
       <recent name="$PROJECT_DIR$/src/Pages" />
       <recent name="$PROJECT_DIR$/src" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src" />
-      <recent name="$PROJECT_DIR$/src/Pages" />
     </key>
   </component>
   <component name="RunManager" selected="npm.npm start">
@@ -103,7 +111,8 @@
       <workItem from="1623790644221" duration="9426000" />
       <workItem from="1623871615661" duration="283000" />
       <workItem from="1624016021895" duration="672000" />
-      <workItem from="1624374551698" duration="1626000" />
+      <workItem from="1624374551698" duration="3682000" />
+      <workItem from="1624575522892" duration="1531000" />
     </task>
     <servers />
   </component>
@@ -155,14 +164,14 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="511" y="367" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900@0.0.1440.900" timestamp="1623617327327" />
-    <state x="413" y="189" width="613" height="580" key="find.popup" timestamp="1623702106506">
+    <state x="413" y="189" width="613" height="580" key="find.popup" timestamp="1624433793222">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="413" y="189" width="613" height="580" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1623702106505" />
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1624378034241">
+    <state x="413" y="189" width="613" height="580" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1624433793222" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1624380315384">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1624378034241" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1624380315384" />
     <state x="385" y="197" width="670" height="599" key="search.everywhere.popup/0.23.1440.797@0.23.1440.797" timestamp="1623802000371" />
   </component>
 </project>
