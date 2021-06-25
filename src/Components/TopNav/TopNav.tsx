@@ -5,9 +5,9 @@ const TopNav = React.forwardRef<HTMLButtonElement>((props, ref) => {
   return (
     <div className="top-nav position-relative">
       <div className="pf-nav-hamburger position-absolute top-right-6">
-        <button className="pf-nav-hamburger-button" ref={ref} />
+        <button className="pf-nav-hamburger-button no-outline" ref={ref} />
       </div>
-      <div className="position-absolute logo-area bg-white h-50-px w-100">
+      <div className="position-absolute logo-area bg-white h-60-px w-100">
         <img
           alt=""
           src={logoIcon}

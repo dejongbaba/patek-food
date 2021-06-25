@@ -188,6 +188,9 @@ body {
 .h-70-px{
   height: 70px;
 }
+.h-60-px{
+  height: 60px;
+}
 .w-80{
   width: 80%;
 }
@@ -276,7 +279,7 @@ body {
   right: 0%;
 }
 .top-right-6{
-  top: 115%;
+  top: 125%;
   right: 0%;
 }
 .top-center{
