@@ -22,8 +22,16 @@ function App() {
 
   if (loader) {
     return (
-      <div className="mh-100-vh position-fixed w-100 d-flex align-center justify-center ">
-        <Loader type="Grid" color="#114919" height={100} width={100} />;
+      <div className="mh-100-vh position-fixed bg-light-yellow w-100 d-flex align-center justify-center ">
+        <Loader
+          secondaryColor="#C69803"
+          visible={loader}
+          type="Bars"
+          color="#114919"
+          height={100}
+          width={100}
+        />
+        ;
       </div>
     );
   }

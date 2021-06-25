@@ -11,7 +11,7 @@ const TopNav = React.forwardRef<HTMLButtonElement>((props, ref) => {
         <img
           alt=""
           src={logoIcon}
-          className="w-30 md-d-none position-absolute"
+          className="w-25 md-d-none position-absolute"
         />
       </div>
 

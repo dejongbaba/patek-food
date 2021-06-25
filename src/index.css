@@ -276,7 +276,7 @@ body {
   right: 0%;
 }
 .top-right-6{
-  top: 35%;
+  top: 115%;
   right: 0%;
 }
 .top-center{
@@ -680,6 +680,9 @@ body {
 }
 .w-30{
   width: 30%;
+}
+.w-25{
+  width: 25%;
 }
 .w-350px{
   width: 350px;

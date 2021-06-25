@@ -54,7 +54,7 @@ function About(props: AboutType) {
       <PageTop
         image={catFishbg}
         description="We employ the most technologically advanced fish production equipment in the industry. "
-        title="Buy healthy controlled
+        title="Bxuy healthy controlled
 Catfish from Hatchery to Oven"
         linkText={"Contact us"}
         link={"/contact"}
