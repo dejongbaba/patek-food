@@ -19,10 +19,7 @@ function App() {
     window.onload = () => {
       const ele = document.getElementById("loader");
       if (ele) {
-        ele.classList.add("roll-down");
-        setTimeout(() => {
-          ele.style.display = "done";
-        }, 2000);
+        ele.outerHTML = "";
       }
     };
   }, []);
