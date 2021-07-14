@@ -203,6 +203,7 @@ const downloadFile = (
     });
 };
 
+export const naira = "₦";
 const checkExpiry = (date: boolean) => {
   if (date === undefined) {
     return "unavailable";

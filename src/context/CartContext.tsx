@@ -3,7 +3,6 @@ import catFishProduct from "../assets/png/catfDryFish.png";
 import { CartAction, CartInitialState, ObjProp } from "../type";
 import { initOrder, payOrder, verifyOrder } from "../services/OrderService";
 import { AppearanceTypes, useToasts } from "react-toast-notifications";
-import { useHistory } from "react-router";
 
 const CartContext = React.createContext({});
 

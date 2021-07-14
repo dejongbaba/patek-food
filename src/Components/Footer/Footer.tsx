@@ -11,6 +11,7 @@ import Button from "../Button/Button";
 import { useCartContext } from "../../context/CartContext";
 import Form from "../Form/Form";
 import { PaystackConsumer } from "react-paystack";
+import { formatNumber, naira } from "../../utils/fx/fx";
 
 function Footer(props: Partial<FooterProps>) {
   const {
@@ -101,7 +102,7 @@ function Footer(props: Partial<FooterProps>) {
       </div>
       {show && (
         <Modal
-          innerClassName="br-1 md-br-2 md-height-500 overflow-y"
+          innerClassName="br-1 md-br-2"
           onClick={onCloseModal}
           onNullClick={(e) => e.stopPropagation()}
         >
@@ -130,7 +131,10 @@ function Footer(props: Partial<FooterProps>) {
             <hr />
             <div className="d-flex justify-space-between align-center">
               <h3>Total</h3>
-              <h3 className="font-bold">{total}</h3>
+              <h3 className="font-bold">
+                {naira}
+                {formatNumber(total)}
+              </h3>
             </div>
             <Form.Input
               type="email"

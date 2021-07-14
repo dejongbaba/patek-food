@@ -15,6 +15,7 @@ import { Link } from "react-router-dom";
 import useShowMenu from "../../hooks/useShowMenu";
 import { CartButtonProps, CartItemProp } from "../../type";
 import Spinner from "../Spinner/Spinner";
+import { formatNumber, naira } from "../../utils/fx/fx";
 
 export const ProductSection = () => {
   return (
@@ -351,7 +352,8 @@ export const ProductCard = ({
                   {sizes?.length
                     ? sizes.map((s) => (
                         <option value={s.id}>
-                          {s.name} {s.type} {s.amount}
+                          {s.name} {s.type} {naira}
+                          {formatNumber(s.amount)}
                         </option>
                       ))
                     : null}
@@ -483,7 +485,10 @@ export const CartItem = ({
           <span className="mr-1">Qty:{quantity}</span> <span>Type:{type}</span>
         </p>
       </div>
-      <span className="font-bold d-none md-d-block">{price}</span>
+      <span className="font-bold d-none md-d-block">
+        {naira}
+        {formatNumber(price)}
+      </span>
     </div>
   );
 };

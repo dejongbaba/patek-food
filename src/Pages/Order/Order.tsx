@@ -2,10 +2,10 @@ import React, { useEffect, useState } from "react";
 // @ts-ignore
 import { BottomCta, PageTop, Section } from "../../Components/PatekUI/PatekUi";
 import Footer from "../../Components/Footer/Footer";
-import Banner from "../../Components/Banner/Banner";
 import catFishbg from "../../assets/png/cat-fish-bg.png";
 import { useParams } from "react-router";
 import { verifyOrder } from "../../services/OrderService";
+import { formatNumber, naira } from "../../utils/fx/fx";
 
 type AboutType = {};
 
@@ -53,7 +53,10 @@ Catfish from Hatchery to Oven"
                       return (
                         <tr>
                           <td className="pr-1">{p.product.name}</td>
-                          <td className="pr-1">{p.product.amount}</td>
+                          <td className="pr-1">
+                            {naira}
+                            {formatNumber(p.product.amount)}
+                          </td>
                           <td className="pr-1">{p.quantity || "--"}</td>
                         </tr>
                       );
@@ -61,7 +64,10 @@ Catfish from Hatchery to Oven"
                   </tbody>
                 </table>
                 <div className="bg-green text-white p-1 mt-2 br-1">
-                  <h1>Total: {orders?.[0]?.amount}</h1>
+                  <h1>
+                    Total: {naira}
+                    {formatNumber(orders?.[0]?.amount)}
+                  </h1>
                   <p>Status: {orders?.[0]?.status}</p>
                 </div>
               </div>
