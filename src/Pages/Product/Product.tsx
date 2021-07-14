@@ -12,22 +12,26 @@ import {
 import Footer from "../../Components/Footer/Footer";
 import kify from "../../assets/png/kify.png";
 import kifyPack from "../../assets/png/kify-smoked-african-catfish.png";
-import catFishProduct from "../../assets/png/catfDryFish.png";
 import dottenPattern from "../../assets/png/dotted-pattern.png";
 import worker from "../../assets/png/worker-working-bg.png";
+import { useProductContext } from "../../context/ProductContext";
+import { CartContextType, ProductContextType } from "../../type";
+import { useCartContext } from "../../context/CartContext";
 
 function Product() {
-  const prods = [
-    { name: "whole fish" },
-    { name: "Fish Head" },
-    { name: "Fish Tail" },
-    { name: "Fish Steak" },
-  ];
-  const productImages: string[] | undefined = [
-    catFishProduct,
-    catFishProduct,
-    catFishProduct,
-  ];
+  const {
+    data,
+    size,
+    selectedProduct,
+    subProducts,
+    loading,
+    onClickProduct,
+    onSizeChange,
+    quantity,
+    onPlus,
+    onMinus,
+  }: ProductContextType = useProductContext();
+  const { onAddItem, loading: cartLoading }: CartContextType = useCartContext();
   return (
     <div>
       <PageTop
@@ -53,6 +57,7 @@ function Product() {
             <i className="fa-1x fab fa-facebook mr-1 text-yellow" />
             <i className="fa-1x fab fa-linkedin mr-1 text-yellow" />
             <i className="fa-1x fab fa-instagram mr-1 text-yellow" />
+            <i className="fa-1x fab fa- mr-1 text-yellow" />
           </div>
         </TextWithPattern>
       </SectionWithFlex>
@@ -79,7 +84,7 @@ function Product() {
           </p>
 
           <p className="md-green-dash text-yellow md-w-30 md-text-right md-position-absolute bottom-left-5">
-            Has different size options. Cusotmers are presented with different
+            Has different size options. Customers are presented with different
             size options to pick from and it can be repacked and sold to the
             final consumer
           </p>
@@ -114,13 +119,28 @@ function Product() {
           <h1 className="font-bold text-green position-relative z-1">
             Order now
           </h1>
-          <ProductList products={prods} />
+          <ProductList onClickProduct={onClickProduct} products={data} />
         </div>
-        <ProductCard images={productImages} />
+        <ProductCard
+          buttonLoading={cartLoading}
+          sizes={subProducts?.data}
+          onSizeChange={onSizeChange}
+          onPlus={onPlus}
+          size={size?.id}
+          onMinus={onMinus}
+          weights={selectedProduct?.weights}
+          onAddToCart={() => onAddItem(size, quantity)}
+          quantity={quantity}
+          page={subProducts?.page}
+          total={subProducts?.total}
+          loading={loading}
+          images={selectedProduct?.meta?.images}
+          name={selectedProduct?.name}
+        />
       </SectionWithFlex>
       <BottomCta
         title="Learn more about Patec Food"
-        linkText="About Us"
+        linkText="Order Us"
         link="/about"
       />
       <Footer />
@@ -129,3 +149,22 @@ function Product() {
 }
 
 export default Product;
+
+/*
+ *
+ * TODO Place the cart modal and the cart icon in the footer
+ *  fetch all products
+ * add reducer and global state to handle cart state and actions
+ * handle cart item increase
+ * add loader to show item once the product is selected
+ * add handler for cart item decrease button
+ * add handler for checkout
+ * call order init
+ * call verify with invoice id
+ * then handle pay stack call back
+ * add click handler on the product list
+ * add loader to the product show case
+ *
+ *
+ *
+ * */

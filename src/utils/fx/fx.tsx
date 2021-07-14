@@ -1,5 +1,3 @@
-// 1. Function to get UUID
-import { POST_DATA } from "../../config/Api";
 import moment from "moment";
 
 const uuid = (seed = 100) =>
@@ -37,17 +35,6 @@ export const checkStatus = (data: string) => {
     ? "CANCELLED"
     : "";
 };
-export function postImage(file: any, endpoint: string) {
-  const config = {
-    headers: {
-      "Content-Type": file.type,
-      Authorization: `Bearer ${getToken()}`,
-    },
-  };
-  const data = new FormData();
-  data.append("media", file);
-  return POST_DATA(endpoint, data, config);
-}
 
 export const detectKey = () => {
   if (process.env.NODE_ENV !== "production" || getUrl() === "stage-insurance") {

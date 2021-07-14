@@ -13,6 +13,8 @@ import Form from "../Form/Form";
 import OwlCarousel from "react-owl-carousel";
 import { Link } from "react-router-dom";
 import useShowMenu from "../../hooks/useShowMenu";
+import { CartButtonProps, CartItemProp } from "../../type";
+import Spinner from "../Spinner/Spinner";
 
 export const ProductSection = () => {
   return (
@@ -271,19 +273,23 @@ export const Timeline = ({ data }: Partial<TimelineProps>) => {
 
 type ProductListProp = {
   products: Array<ProductProp>;
+  onClickProduct: (p: any) => void;
 };
 
 type ProductProp = {
   name: string;
 };
 
-export const ProductList = ({ products }: ProductListProp) => {
+export const ProductList = ({ products, onClickProduct }: ProductListProp) => {
   return (
     <ul className="py-2 unstyled-list p-0 md-w-300px bg-green br-2 text-center position-relative">
       {products?.length &&
         React.Children.toArray(
           products.map((p: ProductProp) => (
-            <li className="p-2 white pointer text-white bt-white-1">
+            <li
+              onClick={(e) => onClickProduct(p)}
+              className="p-2 white pointer text-white bt-white-1"
+            >
               {p.name}
             </li>
           ))
@@ -294,58 +300,130 @@ export const ProductList = ({ products }: ProductListProp) => {
 
 type ProductCardType = ImageCarouselType & {
   name: string;
+  quantity: number;
+  page: number;
+  size: string | undefined;
+  total: number;
+  loading: boolean;
+  buttonLoading: boolean;
+  sizes: Array<any>;
+  weights: Array<any>;
+  onPlus: () => void;
+  onMinus: () => void;
+  onAddToCart: () => void;
+  onSizeChange: (e: { [key: string]: string }) => void;
 };
 
 export const ProductCard = ({
   images,
   name = "WholeFish",
+  quantity,
+  onPlus,
+  onMinus,
+  onSizeChange,
+  sizes,
+  size,
+  page,
+  total,
+  loading,
+  buttonLoading,
+  onAddToCart,
 }: Partial<ProductCardType>) => {
   return (
-    <div className="p-2 md-w-70 box-shadow-1 br-2">
-      <h3>{name}</h3>
-      <ImageCarousel images={images} />
-      <div className="d-flex align-start">
-        <div className="md-mr-3 w-100">
-          <div className="d-flex flex-column md-flex-row align-start">
-            <Form.Select className="flex-grow-1" label="Size" name={""}>
-              <option value="">Whole (80g - 110g)</option>
-            </Form.Select>
-            <div className="md-ml-1">
-              <div>
-                <div className="text-yellow fs-0-8-rem mb-0-3">Qty</div>
+    <div className="p-2 md-w-60 box-shadow-1 br-2">
+      {loading ? (
+        <Spinner className="d-flex align-center justify-center" />
+      ) : (
+        <>
+          <h3 className="fs-0-8-rem md-fs-1">{name}</h3>
+          <ImageCarousel images={images} />
+          <div className="d-flex align-start">
+            <div className="md-mr-3 w-100">
+              <div className="d-flex flex-column md-flex-row align-start">
+                <Form.Select
+                  value={size}
+                  onChange={onSizeChange}
+                  className="flex-grow-1"
+                  label="Size"
+                  name={"size"}
+                >
+                  <option value="">Select Size</option>
+                  {sizes?.length
+                    ? sizes.map((s) => (
+                        <option value={s.id}>
+                          {s.name} {s.type} {s.amount}
+                        </option>
+                      ))
+                    : null}
+                  {/*<option value="">Whole (80g - 110g)</option>*/}
+                </Form.Select>
+                <div className="md-ml-1">
+                  <div>
+                    <div className="text-yellow fs-0-8-rem mb-0-3">Qty</div>
+                  </div>
+                  <div className="d-flex align-center">
+                    <Button
+                      onClick={onMinus}
+                      type="button"
+                      title="-"
+                      className="text-yellow bg-white no-border border-yellow w-50px h-50-px"
+                    />
+                    <strong className="mx-2">{quantity}</strong>
+
+                    <Button
+                      onClick={onPlus}
+                      type="button"
+                      title="+"
+                      className="text-yellow bg-white no-border border-yellow w-50px h-50-px"
+                    />
+                  </div>
+                </div>
               </div>
-              <div className="d-flex align-center">
-                <Button
-                  type="button"
-                  title="+"
-                  className="text-yellow bg-white no-border border-yellow w-50px h-50-px"
-                />
-                <strong className="mx-2">4</strong>
-                <Button
-                  type="button"
-                  title="-"
-                  className="text-yellow bg-white no-border border-yellow w-50px h-50-px"
-                />
+
+              <div className="d-flex flex-column md-flex-row mb-2">
+                {/*{weights?.length*/}
+                {/*  ? weights.map((w) => (*/}
+                {/*      <Form.Radio*/}
+                {/*        name={w.name}*/}
+                {/*        value={w.name}*/}
+                {/*        onChange={() =>*/}
+                {/*          onWeightChange ? onWeightChange(w) : null*/}
+                {/*        }*/}
+                {/*        label={w.name}*/}
+                {/*      />*/}
+                {/*    ))*/}
+                {/*  : null}*/}
+                {/*<Form.Radio*/}
+                {/*  name="weight"*/}
+                {/*  value="4506"*/}
+                {/*  onChange={onWeightChange}*/}
+                {/*  label="N 4560(Kilogram)"*/}
+                {/*/>*/}
+                {/*<Form.Radio*/}
+                {/*  name="weight"*/}
+                {/*  value="4506"*/}
+                {/*  onChange={onWeightChange}*/}
+                {/*  label="N 4560(Kilogram)"*/}
+                {/*/>*/}
               </div>
             </div>
           </div>
 
-          <div className="d-flex flex-column md-flex-row mb-2">
-            <Form.CheckBox name="" label="N 4560(Kilogram)" />
-            <Form.CheckBox name="" label="N 4560(Kilogram)" />
-          </div>
-        </div>
-      </div>
-
-      <Button
-        type="button"
-        title="Add to Cart"
-        className="w-100 btn-green md-px-5 py-1 br-0-5 no-border text-center"
-      />
-      <p className="text-gray text-center">
-        {" "}
-        Range per carton <strong>110 - 115</strong>
-      </p>
+          <Button
+            loading={buttonLoading}
+            onClick={onAddToCart}
+            type="button"
+            title="Add to Cart"
+            className="w-100 btn-green md-px-5 py-1 br-0-5 no-border text-center"
+          />
+          <p className="text-gray text-center">
+            Range per carton{" "}
+            <strong>
+              {page} - {total}
+            </strong>
+          </p>
+        </>
+      )}
     </div>
   );
 };
@@ -387,13 +465,39 @@ export const ImageCarousel = ({ images }: ImageCarouselType) => {
     </OwlCarousel>
   );
 };
-
-export const CartButton = () => {
+export const CartItem = ({
+  title,
+  type,
+  image,
+  quantity,
+  price,
+  onDelete,
+}: CartItemProp) => {
+  return (
+    <div className="d-flex mb-1 justify-space-around align-center ">
+      <i className="fa fa-trash red mr-1" onClick={onDelete} />
+      <img className=" w-100-px md-w-100-px mr-1" src={image} alt="cart item" />
+      <div className="flex-grow-1">
+        <h3 className="font-bold text-green">{title}</h3>
+        <p className="text-gray fs-1">
+          <span className="mr-1">Qty:{quantity}</span> <span>Type:{type}</span>
+        </p>
+      </div>
+      <span className="font-bold d-none md-d-block">{price}</span>
+    </div>
+  );
+};
+export const CartButton = ({ onClick, cartItems }: CartButtonProps) => {
   return (
     <Button
+      onClick={onClick}
       type="button"
-      title={<i className="fa fas fa-cart" />}
-      className="br-50 bg-green position-fixed bottom-left-2 text-white w-50px h-50-px"
-    />
+      title={<i className="fas fa-shopping-cart fs-1" />}
+      className="br-50 bg-green position-fixed no-border bottom-right-4 text-white w-70-px h-70-px"
+    >
+      <div className="w-30-px h-30 position-absolute br-50-p-cent box-shadow-1 top-right-4 bg-white text-green d-flex align-center justify-center">
+        {cartItems}
+      </div>
+    </Button>
   );
 };

@@ -20,8 +20,6 @@ function useShowMenu(hamburger: RefObject<unknown>, menu: RefObject<unknown>) {
     const element = hamburger && hamburger.current;
 
     if (element) {
-      console.log("hamburger element", element);
-
       // @ts-ignore
       element.addEventListener("click", ButtonEvent);
     }

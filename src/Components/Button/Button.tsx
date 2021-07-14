@@ -5,6 +5,7 @@ import { ReactNode } from "react";
 export interface IProps {
   className?: string;
   title?: string | ReactNode;
+  children?: ReactNode;
   loading?: boolean;
   type: "submit" | "button" | "reset";
   icon?: string;
@@ -20,6 +21,7 @@ function Button(props: IProps) {
     >
       {props.icon && <img src={props.icon} alt="icon-button" />}
       {props.loading ? "...loading" : <span>{props.title}</span>}
+      {props.children}
     </button>
   );
 }

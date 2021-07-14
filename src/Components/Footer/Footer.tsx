@@ -3,9 +3,33 @@ import "./footer.scss";
 import footerLogo from "../../assets/png/logo.png";
 import phoneCalling from "../../assets/svg/Calling.svg";
 import { Link } from "react-router-dom";
-function Footer() {
+import { CartButton, CartItem } from "../PatekUI/PatekUi";
+import { CartContextType, FooterProps } from "../../type";
+import Modal from "../Modal/Modal";
+import imageItem from "../../assets/png/fish-item.png";
+import Button from "../Button/Button";
+import { useCartContext } from "../../context/CartContext";
+import Form from "../Form/Form";
+import { PaystackConsumer } from "react-paystack";
+
+function Footer(props: Partial<FooterProps>) {
+  const {
+    cartItems,
+    itemCount,
+    onRemoveItem,
+    email,
+    onChangeEmail,
+    total,
+    onCloseModal,
+    show,
+    loading,
+    onCheckout,
+    payStackProps,
+  }: CartContextType = useCartContext();
+
   return (
     <footer className="w-80 md-w-70 pb-2 md-pb-0 d-flex position-relative flex-column md-flex-row mx-auto bg-pattern">
+      <CartButton cartItems={itemCount || 0} onClick={onCloseModal} />
       <div className="md-p-2 flex-grow-1">
         <img className="w-100-px" src={footerLogo} alt="" />
         <div className="d-flex align-space-between">
@@ -75,6 +99,61 @@ function Footer() {
           </button>
         </div>
       </div>
+      {show && (
+        <Modal
+          innerClassName="br-1 md-br-2 md-height-500 overflow-y"
+          onClick={onCloseModal}
+          onNullClick={(e) => e.stopPropagation()}
+        >
+          <div className="p-1 md-p-4">
+            <div className="d-flex align-center md-align-center justify-space-between mb-1">
+              {" "}
+              <h2>Cart</h2>{" "}
+              <span className="pointer" onClick={onCloseModal}>
+                Back
+              </span>
+            </div>
+            <div className="h-300 overflow-auto">
+              {cartItems?.length
+                ? cartItems.map((item: any) => (
+                    <CartItem
+                      onDelete={() => onRemoveItem(item)}
+                      price={item.amount}
+                      quantity={item.quantity}
+                      image={imageItem}
+                      type={item.type}
+                      title={item.name}
+                    />
+                  ))
+                : null}
+            </div>
+            <hr />
+            <div className="d-flex justify-space-between align-center">
+              <h3>Total</h3>
+              <h3 className="font-bold">{total}</h3>
+            </div>
+            <Form.Input
+              type="email"
+              value={email}
+              onChange={onChangeEmail}
+              name="email"
+              label="Email"
+            />
+
+            <PaystackConsumer {...payStackProps}>
+              {({ initializePayment }: any) => (
+                <Button
+                  loading={loading}
+                  type={"button"}
+                  onClick={() => onCheckout(initializePayment)}
+                  title="Checkout"
+                  className="w-100 no-border br-1 p-2 bg-green text-center text-white"
+                />
+              )}
+            </PaystackConsumer>
+          </div>
+        </Modal>
+      )}
     </footer>
   );
 }

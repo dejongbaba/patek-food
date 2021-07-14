@@ -29,6 +29,14 @@
   --pacifico: 'Pacifico', cursive;
 }
 
+@keyframes rollDown {
+  from{
+    height: 0%;
+  }
+  to{
+    height: 100%;
+  }
+}
 
 body {
   margin: 0;
@@ -604,6 +612,9 @@ body {
 .overflow-auto {
   overflow: auto;
 }
+.overflow-y{
+  overflow-y: auto;
+}
 .mt-1 {
   margin-top: 1rem;
 }
@@ -684,6 +695,9 @@ body {
 .w-30{
   width: 30%;
 }
+.w-30-px{
+  width: 30px;
+}
 .w-25{
   width: 25%;
 }
@@ -763,6 +777,9 @@ body {
 }
 .p-4{
   padding: 4rem;
+}
+.pr-1{
+  padding-right: 1rem;
 }
 .p-5{
   padding: 5rem;
@@ -926,4 +943,7 @@ body {
 }
 .owl-carousel .owl-nav .owl-next{
   right: 5%;
+}
+.page-loader{
+  animation: rollDown .5s  ease-in-out;
 }

@@ -10,7 +10,10 @@ import "./responsive.css";
 import { ToastProvider } from "react-toast-notifications";
 import ScrollToTop from "./Components/ScrollToTop/ScrollToTop";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
-import Loader from "react-loader-spinner";
+import { ProductContextProvider } from "./context/ProductContext";
+import CartContextProvider from "./context/CartContext";
+import Order from "./Pages/Order/Order";
+import Spinner from "./Components/Spinner/Spinner";
 
 function App() {
   const [loader, setLoader] = useState(true);
@@ -22,16 +25,8 @@ function App() {
 
   if (loader) {
     return (
-      <div className="mh-100-vh position-fixed bg-light-yellow w-100 d-flex align-center justify-center ">
-        <Loader
-          secondaryColor="#C69803"
-          visible={loader}
-          type="Bars"
-          color="#114919"
-          height={100}
-          width={100}
-        />
-        ;
+      <div className="mh-100-vh page-loader position-fixed bg-light-yellow w-100 d-flex align-center justify-center ">
+        <Spinner />
       </div>
     );
   }
@@ -39,17 +34,22 @@ function App() {
   return (
     <>
       <ToastProvider>
-        <Router>
-          <Switch>
-            <ScrollToTop>
-              <Route exact path="/" component={Home} />
-              <Route exact path="/about" component={About} />
-              <Route exact path="/services" component={Services} />
-              <Route exact path="/contact" component={Contact} />
-              <Route exact path="/products" component={Product} />
-            </ScrollToTop>
-          </Switch>
-        </Router>
+        <ProductContextProvider>
+          <CartContextProvider>
+            <Router>
+              <Switch>
+                <ScrollToTop>
+                  <Route exact path="/" component={Home} />
+                  <Route exact path="/about" component={About} />
+                  <Route exact path="/order/:id" component={Order} />
+                  <Route exact path="/services" component={Services} />
+                  <Route exact path="/contact" component={Contact} />
+                  <Route exact path="/products" component={Product} />
+                </ScrollToTop>
+              </Switch>
+            </Router>
+          </CartContextProvider>
+        </ProductContextProvider>
       </ToastProvider>
     </>
   );
