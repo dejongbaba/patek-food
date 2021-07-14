@@ -41,9 +41,11 @@
   transition: 0.3s all;
 
   &-content {
-    width: auto;
+    min-width: 70%;
     @include breakpoint(desktop-up){
       width: 600px;
+      min-width: unset;
+
     }
     //max-width: 570px;
     background: #fff;

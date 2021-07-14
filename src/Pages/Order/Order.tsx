@@ -29,9 +29,8 @@ Catfish from Hatchery to Oven"
         linkText={"Contact us"}
         link={"/contact"}
       />
-      <Banner />
       <Section className="mt-4">
-        <div className="md-w-40 mx-auto">
+        <div className="p-2 md-p-0 md-w-40 mx-auto">
           <h3>Cart Orders Paid</h3>
           <hr />
           <p>

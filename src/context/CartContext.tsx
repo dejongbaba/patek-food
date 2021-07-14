@@ -137,7 +137,6 @@ export function CartContextProvider(props: { children: ReactNode }) {
   const [paymentUrl, setPaymentUrl] = useState("");
   const [email, setEmail] = useState("");
   const [orderId, setOrderId] = useState("");
-  const history = useHistory();
 
   const onCloseModal = () => {
     setShow(!show);
@@ -175,11 +174,13 @@ export function CartContextProvider(props: { children: ReactNode }) {
   // you can call this function anything
   const handleSuccess = (reference: any) => {
     // Implementation for whatever you want to do with reference and after success call.
-    console.log(reference);
     setShow(false);
     // @ts-ignore
     dispatch({ type: cartActions.CLEAR, payload: {} });
-    history.push("/order/" + orderId);
+    console.log("orderid", orderId);
+    if (orderId) {
+      window.location.href = "/order/" + orderId;
+    }
     toastMessage(`A Payment Reference has been sent to your email`, "success");
   };
 
@@ -221,6 +222,7 @@ export function CartContextProvider(props: { children: ReactNode }) {
       .then((res) => {
         // @ts-ignore
         delete pl.productId;
+        console.log(res);
         setOrderId(res?.data?.[0]?.id);
         return payOrder(res?.data?.[0]?.id, {
           ...pl,
@@ -251,8 +253,6 @@ export function CartContextProvider(props: { children: ReactNode }) {
     handleClose,
     handleSuccess,
   };
-
-  console.log("log", value);
 
   return (
     <CartContext.Provider value={value}>{props.children}</CartContext.Provider>

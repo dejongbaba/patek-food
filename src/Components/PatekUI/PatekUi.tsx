@@ -493,7 +493,7 @@ export const CartButton = ({ onClick, cartItems }: CartButtonProps) => {
       onClick={onClick}
       type="button"
       title={<i className="fas fa-shopping-cart fs-1" />}
-      className="br-50 bg-green position-fixed no-border bottom-right-4 text-white w-70-px h-70-px"
+      className="br-50 z-10 bg-green position-fixed no-border bottom-right-4 text-white w-70-px h-70-px"
     >
       <div className="w-30-px h-30 position-absolute br-50-p-cent box-shadow-1 top-right-4 bg-white text-green d-flex align-center justify-center">
         {cartItems}
