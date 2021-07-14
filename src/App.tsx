@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./Pages/Home/Home";
 import About from "./Pages/About/About";
@@ -13,23 +13,19 @@ import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import { ProductContextProvider } from "./context/ProductContext";
 import CartContextProvider from "./context/CartContext";
 import Order from "./Pages/Order/Order";
-import Spinner from "./Components/Spinner/Spinner";
 
 function App() {
-  const [loader, setLoader] = useState(true);
   useEffect(() => {
     window.onload = () => {
-      setLoader(false);
+      const ele = document.getElementById("loader");
+      if (ele) {
+        ele.classList.add("roll-down");
+        setTimeout(() => {
+          ele.outerHTML = "";
+        }, 2000);
+      }
     };
   }, []);
-
-  if (loader) {
-    return (
-      <div className="mh-100-vh page-loader position-fixed bg-light-yellow w-100 d-flex align-center justify-center ">
-        <Spinner />
-      </div>
-    );
-  }
 
   return (
     <>
