@@ -18,9 +18,9 @@ import Spinner from "./Components/Spinner/Spinner";
 function App() {
   const [loader, setLoader] = useState(true);
   useEffect(() => {
-    window.addEventListener("load", () => {
+    window.onload = () => {
       setLoader(false);
-    });
+    };
   }, []);
 
   if (loader) {

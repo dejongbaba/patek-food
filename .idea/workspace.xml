@@ -14,34 +14,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12e7b538-ea45-4767-a8c7-28638918783d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Modal/Modal.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Modal/Modal.test.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Modal/Modal.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Pages/Order/Order.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/png/fish-item.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/svg/close.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/context/CartContext.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/context/ProductContext.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/OrderService.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/ProductService.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/type/index.d.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/.env" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Button/Button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Button/Button.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Footer/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Footer/Footer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/PatekUI/PatekUi.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/PatekUI/PatekUi.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Spinner/Spinner.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Spinner/Spinner.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/About/About.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/About/About.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Product/Product.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Product/Product.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/Api.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/Api.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/useShowMenu.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useShowMenu.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/responsive.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/responsive.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/fx/fx.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/fx/fx.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,7 +112,7 @@
       <workItem from="1625495139211" duration="1320000" />
       <workItem from="1625743086910" duration="3069000" />
       <workItem from="1626098553673" duration="4569000" />
-      <workItem from="1626215415165" duration="1841000" />
+      <workItem from="1626215415165" duration="2662000" />
     </task>
     <servers />
   </component>
