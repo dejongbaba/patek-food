@@ -21,7 +21,7 @@ function App() {
       if (ele) {
         ele.classList.add("roll-down");
         setTimeout(() => {
-          ele.outerHTML = "";
+          ele.style.display = "done";
         }, 2000);
       }
     };
