@@ -68,7 +68,7 @@ Catfish from Hatchery to Oven"
                     Total: {naira}
                     {formatNumber(orders?.[0]?.amount)}
                   </h1>
-                  <p>Status: {orders?.[0]?.status}</p>
+                  <p>Status: {orders?.[0]?.status}</p> 
                 </div>
               </div>
             ) : (

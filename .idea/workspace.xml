@@ -14,12 +14,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12e7b538-ea45-4767-a8c7-28638918783d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.prettierrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/jpeg/cat-fish.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/jpeg/commit-quality.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/jpeg/highly-experienced.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/jpeg/patek-about.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/jpeg/patek-home.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/jpeg/patek-product.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/png/dried-fish.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/png/fingerlings.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/png/smoked-african-catfish.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Banner/Banner.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Banner/Banner.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Footer/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Footer/Footer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Modal/Modal.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Modal/Modal.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Header/Header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Header/Header.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Header/Header.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/PatekUI/PatekUi.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/PatekUI/PatekUi.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/About/About.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/About/About.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Contact/Contact.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Contact/Contact.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pages/Order/Order.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Order/Order.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/context/CartContext.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/CartContext.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Product/Product.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Product/Product.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/fx/fx.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/fx/fx.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,7 +64,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Pages" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets/jpeg" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -63,17 +78,17 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/Pages" />
-      <recent name="$PROJECT_DIR$/src/context" />
-      <recent name="$PROJECT_DIR$/src/assets/png" />
-      <recent name="$PROJECT_DIR$/src/assets/svg" />
-      <recent name="$PROJECT_DIR$/src/Components" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/Pages" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/assets/jpeg" />
+      <recent name="$PROJECT_DIR$/src/assets/png" />
+      <recent name="$PROJECT_DIR$/src/Pages" />
+      <recent name="$PROJECT_DIR$/src/context" />
+      <recent name="$PROJECT_DIR$/src/assets/svg" />
     </key>
   </component>
   <component name="RunManager" selected="npm.npm start">
@@ -117,7 +132,11 @@
       <workItem from="1625495139211" duration="1320000" />
       <workItem from="1625743086910" duration="3069000" />
       <workItem from="1626098553673" duration="4569000" />
-      <workItem from="1626215415165" duration="8643000" />
+      <workItem from="1626215415165" duration="8700000" />
+      <workItem from="1627831955601" duration="910000" />
+      <workItem from="1627889110775" duration="495000" />
+      <workItem from="1628722719680" duration="290000" />
+      <workItem from="1628806035059" duration="3979000" />
     </task>
     <servers />
   </component>
@@ -209,10 +228,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1419" height="312" key="GridCell.Tab.3.right/0.0.1440.900@0.0.1440.900" timestamp="1625004403964" />
-    <state x="221" y="89" key="SettingsEditor" timestamp="1625180567231">
+    <state x="221" y="89" key="SettingsEditor" timestamp="1627833414038">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="221" y="89" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1625180567231" />
+    <state x="221" y="89" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1627833414038" />
     <state x="378" y="71" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1625006742297">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -229,10 +248,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="385" y="210" key="run.anything.popup/0.0.1440.900@0.0.1440.900" timestamp="1626219703563" />
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1626260802891">
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1628817617439">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1626260802891" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1628817617439" />
     <state x="385" y="197" width="670" height="599" key="search.everywhere.popup/0.23.1440.797@0.23.1440.797" timestamp="1623802000371" />
   </component>
 </project>
