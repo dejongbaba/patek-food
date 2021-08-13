@@ -3,8 +3,6 @@ import {
     BottomCta,
     ImageWithPattern,
     PageTop,
-    ProductCard,
-    ProductList,
     Section,
     SectionWithFlex,
     TextWithPattern,
@@ -12,27 +10,23 @@ import {
 import Footer from "../../Components/Footer/Footer";
 import kify from "../../assets/png/kify.png";
 import kifyPack from "../../assets/png/kify-smoked-african-catfish.png";
-import dottenPattern from "../../assets/png/dotted-pattern.png";
 import patekProductImage from "../../assets/jpeg/patek-product.jpeg";
-import { useProductContext } from "../../context/ProductContext";
-import { CartContextType, ProductContextType } from "../../type";
-import { useCartContext } from "../../context/CartContext";
 
 function Product() {
-    const {
-        data,
-        size,
-        selectedProduct,
-        subProducts,
-        loading,
-        onClickProduct,
-        onSizeChange,
-        quantity,
-        onPlus,
-        onMinus,
-    }: ProductContextType = useProductContext();
-    const { onAddItem, loading: cartLoading }: CartContextType =
-        useCartContext();
+    // const {
+    //     // data,
+    //     // size,
+    //     // selectedProduct,
+    //     // subProducts,
+    //     // loading,
+    //     // onClickProduct,
+    //     // onSizeChange,
+    //     // quantity,
+    //     // onPlus,
+    //     // onMinus,
+    // }: ProductContextType = useProductContext();
+    // const { onAddItem, loading: cartLoading }: CartContextType =
+    //     useCartContext();
     return (
         <div>
             <PageTop

@@ -3,7 +3,7 @@ import "./footer.scss";
 import footerLogo from "../../assets/png/logo.png";
 import phoneCalling from "../../assets/svg/Calling.svg";
 import { Link } from "react-router-dom";
-import { CartButton, CartItem } from "../PatekUI/PatekUi";
+import { CartItem } from "../PatekUI/PatekUi";
 import { CartContextType, FooterProps } from "../../type";
 import Modal from "../Modal/Modal";
 import imageItem from "../../assets/png/fish-item.png";
@@ -16,7 +16,7 @@ import { formatNumber, naira } from "../../utils/fx/fx";
 function Footer(props: Partial<FooterProps>) {
     const {
         cartItems,
-        itemCount,
+        // itemCount,
         onRemoveItem,
         email,
         onChangeEmail,
