@@ -21,6 +21,8 @@ export const ProductSection = () => {
     return (
         <div className="d-flex position-relative my-4 py-2 w-100 md-height-400">
             <img
+                data-aos="fade-right"
+                data-aos-delay="100"
                 className="position-absolute d-none md-d-block w-90 top-left"
                 src={yellowBg}
                 alt=""
@@ -36,12 +38,17 @@ export const ProductSection = () => {
                 alt=""
             />
             <div className="w-80 md-w-70 mx-auto d-flex flex-column md-flex-row align-center">
-                <img className="w-100 md-w-50" src={catFish} alt="" />
+                <img
+                    data-aos="fade-up"
+                    className="w-100 md-w-50"
+                    src={catFish}
+                    alt=""
+                />
                 <div className="text-center md-text-left">
-                    <h2 className="text-green md-lh-regular">
+                    <h2 data-aos="fade-up" className="text-green md-lh-regular">
                         High quality products using high quality standards
                     </h2>
-                    <p className="md-lh-regular">
+                    <p data-aos="fade-up" className="md-lh-regular">
                         Our oven dried catfish is rich in protein and other
                         essential vitamins and minerals, and has a consistent
                         mild flavour. Our local farm raised smoked catfish can
@@ -100,9 +107,11 @@ export const TextWithPattern = ({
     title = "Most technologically advanced fish production equipment in the industry",
     desc = "Our catfish are raised in surface tanks using the latest" +
         " fish farming technology and best management practices.",
+    ...props
 }: TextWithPatternProps) => {
     return (
         <div
+            {...props}
             className={`md-lh-regular position-relative align-center flex-grow-1 flex-basis-50-p-cent md-w-50 ${className}`}
         >
             {children}
@@ -127,9 +136,11 @@ export const ImageWithPattern = ({
     image = catfishFactory,
     bgPattern = backgroundSquare,
     bgPatternClassName = "",
+    ...props
 }: ImageWithPatternProps) => {
     return (
         <div
+            {...props}
             className={`md-w-50 flex-basis-50-p-cent flex-grow-1 position-relative ${className}`}
         >
             {image && (
@@ -151,8 +162,12 @@ type SectionProps = {
     className?: string;
 };
 
-export function Section({ children, className = "" }: SectionProps) {
-    return <section className={`mh-450-px ${className}`}>{children}</section>;
+export function Section({ children, className = "", ...props }: SectionProps) {
+    return (
+        <section {...props} className={`mh-450-px ${className}`}>
+            {children}
+        </section>
+    );
 }
 
 type SectionWithFlexProp = SectionProps & {
@@ -162,9 +177,10 @@ export const SectionWithFlex = ({
     children,
     className = "",
     flexClassName = "",
+    ...props
 }: Partial<SectionWithFlexProp>) => {
     return (
-        <Section className={className}>
+        <Section className={className} {...props}>
             <div className="d-flex">
                 <div
                     className={`w-80 md-w-60 mt--50 mx-auto d-flex flex-column md-flex-row ${flexClassName}`}
@@ -208,9 +224,10 @@ type CircularImageProp = {
 export const CircularImageWithSpiral = ({
     image,
     title,
+    ...props
 }: Partial<CircularImageProp>) => {
     return (
-        <div className="text-center mb-2 md-mb-0">
+        <div {...props} className="text-center mb-2 md-mb-0">
             <div className="spiral-img d-flex align-center flex-column  circle">
                 <img src={image} className="w-100" alt="" />;
             </div>
@@ -232,9 +249,13 @@ export const CardWithText = ({
     description = "",
     title = "",
     children,
+    ...props
 }: Partial<CardProp>) => {
     return (
-        <div className={`card mb-2 br-2 bg-green-light ${className}`}>
+        <div
+            {...props}
+            className={`card mb-2 br-2 bg-green-light ${className}`}
+        >
             {image && <img className="w-100" src={image} alt="" />}
             {title && description && (
                 <div className="p-1 md-p-2 text-green">
@@ -254,6 +275,8 @@ type TimelineProps = {
 type TimelineDataProps = {
     title: string;
     description: string;
+    animation: string;
+    delay: number;
 };
 export const Timeline = ({ data }: Partial<TimelineProps>) => {
     return (
@@ -264,7 +287,11 @@ export const Timeline = ({ data }: Partial<TimelineProps>) => {
                           data.map((d: TimelineDataProps) => {
                               return (
                                   <li>
-                                      <div className="right_content">
+                                      <div
+                                          data-aos={d.animation}
+                                          data-aos-delay={d.delay}
+                                          className="right_content"
+                                      >
                                           <h2>{d.title}</h2>
                                           <p>{d.description}</p>
                                       </div>

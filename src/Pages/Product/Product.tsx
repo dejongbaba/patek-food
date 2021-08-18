@@ -9,8 +9,8 @@ import {
 } from "../../Components/PatekUI/PatekUi";
 import Footer from "../../Components/Footer/Footer";
 import kify from "../../assets/png/kify.png";
-import kifyPack from "../../assets/png/kify-smoked-african-catfish.png";
 import patekProductImage from "../../assets/jpeg/patek-product.jpeg";
+import kifyPack from "../../assets/png/smoked-african-catfish.png";
 
 function Product() {
     // const {
@@ -54,19 +54,25 @@ function Product() {
                     </div>
                 </TextWithPattern>
             </SectionWithFlex>
-            <h2 className="text-green fs-2 w-80 md-w-100 mx-auto md-text-center">
+            <h2
+                data-aos="animation-translate-y"
+                className="text-green mb-0 fs-2 w-80 md-w-100 mx-auto md-text-center"
+            >
                 The “Kify” Catfish Promise
             </h2>
-            <p className="text-center">
+            <p data-aos="animation-translate-y" className="text-center mb-0">
                 <i className="w-80 md-w-100 mx-auto md-text-center">
                     quality. convenience. availability
                 </i>
             </p>
 
-            <p className="w-80 mt-3 md-w-100 mx-auto md-text-center">
+            <p
+                data-aos="animation-translate-y"
+                className="w-80 md-w-100 mx-auto md-text-center"
+            >
                 At Patec Foods, our catfish products are:
             </p>
-            <Section>
+            <Section data-aos="animation-translate-y">
                 <div className="w-80 md-h-600 mx-auto position-relative">
                     <img
                         className="d-block md-d-none  w-100 position-relative center-left-4"

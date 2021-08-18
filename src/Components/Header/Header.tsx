@@ -2,6 +2,7 @@ import React from "react";
 import "./Header.scss";
 import headerImg from "../../assets/jpeg/patek-home.jpeg";
 import { Link } from "react-router-dom";
+
 export type HeaderType = {
     image: string;
     title: string;
@@ -26,9 +27,26 @@ function Header({
         >
             {/*<img src={image} alt="" />*/}
             <div className="header-center">
-                <h1 className="header-title">{title}</h1>
-                <p className="header-description">{description} </p>
-                <Link to={link} className="header-button">
+                <h1
+                    className="header-title"
+                    data-aos-delay="200"
+                    data-aos="animation-translate-y"
+                >
+                    {title}
+                </h1>
+                <p
+                    className="header-description"
+                    data-aos-delay="500"
+                    data-aos="animation-translate-y"
+                >
+                    {description}{" "}
+                </p>
+                <Link
+                    to={link}
+                    className="header-button"
+                    data-aos-delay="700"
+                    data-aos="animation-translate-y"
+                >
                     {linkText}
                 </Link>
             </div>

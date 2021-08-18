@@ -13,39 +13,61 @@ import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import { ProductContextProvider } from "./context/ProductContext";
 import CartContextProvider from "./context/CartContext";
 import Order from "./Pages/Order/Order";
+import AOS from "aos";
 
 function App() {
-  useEffect(() => {
-    window.onload = () => {
-      const ele = document.getElementById("loader");
-      if (ele) {
-        ele.outerHTML = "";
-      }
-    };
-  }, []);
+    AOS.init({ easing: "ease-in-sine", offset: 400, delay: 0, duration: 500 });
+    useEffect(() => {
+        window.onload = () => {
+            const ele = document.getElementById("loader");
+            if (ele) {
+                ele.outerHTML = "";
+            }
+        };
+    }, []);
 
-  return (
-    <>
-      <ToastProvider>
-        <ProductContextProvider>
-          <CartContextProvider>
-            <Router>
-              <Switch>
-                <ScrollToTop>
-                  <Route exact path="/" component={Home} />
-                  <Route exact path="/about" component={About} />
-                  <Route exact path="/order/:id" component={Order} />
-                  <Route exact path="/services" component={Services} />
-                  <Route exact path="/contact" component={Contact} />
-                  <Route exact path="/products" component={Product} />
-                </ScrollToTop>
-              </Switch>
-            </Router>
-          </CartContextProvider>
-        </ProductContextProvider>
-      </ToastProvider>
-    </>
-  );
+    return (
+        <>
+            <ToastProvider>
+                <ProductContextProvider>
+                    <CartContextProvider>
+                        <Router>
+                            <Switch>
+                                <ScrollToTop>
+                                    <Route exact path="/" component={Home} />
+                                    <Route
+                                        exact
+                                        path="/about"
+                                        component={About}
+                                    />
+                                    <Route
+                                        exact
+                                        path="/order/:id"
+                                        component={Order}
+                                    />
+                                    <Route
+                                        exact
+                                        path="/services"
+                                        component={Services}
+                                    />
+                                    <Route
+                                        exact
+                                        path="/contact"
+                                        component={Contact}
+                                    />
+                                    <Route
+                                        exact
+                                        path="/products"
+                                        component={Product}
+                                    />
+                                </ScrollToTop>
+                            </Switch>
+                        </Router>
+                    </CartContextProvider>
+                </ProductContextProvider>
+            </ToastProvider>
+        </>
+    );
 }
 
 export default App;

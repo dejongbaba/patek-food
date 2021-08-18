@@ -43,7 +43,7 @@ function Footer(props: Partial<FooterProps>) {
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                +234 8084 232 2342
+                                +234 818 500 0028
                             </a>
                         </p>
                         <p>Available 24/7 everyday</p>
