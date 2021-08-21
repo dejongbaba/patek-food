@@ -16,7 +16,13 @@ import Order from "./Pages/Order/Order";
 import AOS from "aos";
 
 function App() {
-    AOS.init({ easing: "ease-in-sine", offset: 400, delay: 0, duration: 500 });
+    AOS.init({
+        easing: "ease-in-sine",
+        offset: 100,
+        delay: 0,
+        once: true,
+        duration: 500,
+    });
     useEffect(() => {
         window.onload = () => {
             const ele = document.getElementById("loader");

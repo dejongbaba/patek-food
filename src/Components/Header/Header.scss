@@ -35,21 +35,28 @@
   &-title{
     color: var(--white);
     font-weight: 800;
-    font-size: 2.2rem;
+    font-size: 1.6rem;
+    padding:0 2rem;
     line-height: 1.5;
     margin-top: 3rem;
     margin-bottom: 1rem;
 
     @include breakpoint(desktop-up){
       margin-top: unset;
+      padding: unset;
       font-size: 2.3rem;
     }
   }
   &-description{
     color: var(--white);
     line-height: 1.5;
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin-bottom: 2rem;
+    padding:0 3.5rem;
+    @include breakpoint(desktop-up){
+      font-size: 1.2rem;
+      padding: unset;
+    }
   }
   &-button{
     padding: var(--button-padding);

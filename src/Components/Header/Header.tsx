@@ -36,7 +36,7 @@ function Header({
                 </h1>
                 <p
                     className="header-description"
-                    data-aos-delay="500"
+                    data-aos-delay="300"
                     data-aos="animation-translate-y"
                 >
                     {description}{" "}
@@ -44,7 +44,7 @@ function Header({
                 <Link
                     to={link}
                     className="header-button"
-                    data-aos-delay="700"
+                    data-aos-delay="300"
                     data-aos="animation-translate-y"
                 >
                     {linkText}

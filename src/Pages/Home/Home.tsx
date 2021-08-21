@@ -31,7 +31,9 @@ const owlConfig = {
     margin: 10,
     navigation: true,
     singleItem: true,
-    autoPlay: true,
+    autoplay: true,
+    autoplayTimeout: 3000,
+    autoplayHoverPause: true,
     autoplaySpeed: 1000,
     responsiveClass: true,
     responsive: {
